@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://hcrvex4rn71x"]
+
+[ext_resource type="Script" uid="uid://buass5drwf0x7" path="res://scenes/top.gd" id="1_aclgy"]
+
+[node name="top" type="Node2D"]
+script = ExtResource("1_aclgy")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 736.0
+offset_top = 454.0
+offset_right = 928.0
+offset_bottom = 521.0
+text = "top"

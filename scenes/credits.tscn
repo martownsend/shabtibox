@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://fgs87ehtnytc"]
+
+[ext_resource type="Script" uid="uid://bvr1qqbb2bb3u" path="res://scenes/credits.gd" id="1_0bpdh"]
+
+[node name="credits" type="Node2D"]
+script = ExtResource("1_0bpdh")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 866.0
+offset_top = 464.0
+offset_right = 919.0
+offset_bottom = 487.0
+text = "credits"

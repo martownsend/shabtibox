@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://okvuiy4rxhsd"]
+
+[ext_resource type="Script" uid="uid://yd2xwsjkh1ca" path="res://scenes/side_1.gd" id="1_p7v3l"]
+
+[node name="side1" type="Node2D"]
+script = ExtResource("1_p7v3l")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 851.0
+offset_top = 458.0
+offset_right = 916.0
+offset_bottom = 481.0
+text = "side one"

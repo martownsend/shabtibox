@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqo16qttirv78"]
+
+[ext_resource type="Script" uid="uid://i2ivwbbxyw6q" path="res://scenes/citations.gd" id="1_srv0r"]
+
+[node name="citations" type="Node2D"]
+script = ExtResource("1_srv0r")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 836.0
+offset_top = 390.0
+offset_right = 903.0
+offset_bottom = 457.0
+text = "citations"
