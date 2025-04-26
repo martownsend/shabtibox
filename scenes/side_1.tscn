@@ -1,13 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://okvuiy4rxhsd"]
+[gd_scene load_steps=2 format=3 uid="uid://buauaf0fxpj5i"]
 
-[ext_resource type="Script" uid="uid://yd2xwsjkh1ca" path="res://scenes/side_1.gd" id="1_p7v3l"]
+[ext_resource type="Texture2D" uid="uid://d3edahdo2041a" path="res://assets/Shabti_Box_ (9).png" id="1_ucm03"]
 
-[node name="side1" type="Node2D"]
-script = ExtResource("1_p7v3l")
+[node name="Side1" type="Node2D"]
 
-[node name="Label" type="Label" parent="."]
-offset_left = 851.0
-offset_top = 458.0
-offset_right = 916.0
-offset_bottom = 481.0
-text = "side one"
+[node name="ShabtiBox(9)" type="Sprite2D" parent="."]
+position = Vector2(1264, 826)
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("1_ucm03")

@@ -10,19 +10,15 @@ config_version=5
 
 [application]
 
-config/name="V4_2D_ShabtiBox_42425"
-run/main_scene="uid://cili6n5qmvta7"
+config/name="V3_2D_ShabtiBox"
+run/main_scene="res://Scenes/main_menu.tscn"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
-[autoload]
-
-SceneSwitcher="*res://scene_switcher.gd"
-
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
+window/size/viewport_width=2560
+window/size/viewport_height=1664
 
 [rendering]
 

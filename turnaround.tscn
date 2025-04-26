@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwd2hku5no1p0"]
+
+[ext_resource type="VideoStream" uid="uid://b2lbfhut3xlpo" path="res://assets/turntabletest.ogv" id="1_c5n4h"]
+[ext_resource type="Texture2D" uid="uid://ivtl1cw7tfa7" path="res://assets/Close.png" id="2_lg7xf"]
+[ext_resource type="Texture2D" uid="uid://m0kd6hk0efol" path="res://assets/Close_Hover.png" id="3_5kw0q"]
+[ext_resource type="Script" uid="uid://dqsburt0v6dbo" path="res://main_menu_button.gd" id="4_kyb1y"]
+
+[node name="Turnaround" type="Node2D"]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_left = -118.0
+offset_top = -56.0
+offset_right = 1802.0
+offset_bottom = 1024.0
+scale = Vector2(1.46412, 1.6701)
+stream = ExtResource("1_c5n4h")
+autoplay = true
+loop = true
+
+[node name="MainMenuLayer" type="CanvasLayer" parent="."]
+
+[node name="MainMenuButton" type="TextureButton" parent="MainMenuLayer"]
+offset_left = 174.0
+offset_top = 1086.0
+offset_right = 1824.0
+offset_bottom = 2361.0
+scale = Vector2(0.24, 0.24)
+texture_normal = ExtResource("2_lg7xf")
+texture_hover = ExtResource("3_5kw0q")
+script = ExtResource("4_kyb1y")
+
+[connection signal="pressed" from="MainMenuLayer/MainMenuButton" to="MainMenuLayer/MainMenuButton" method="_on_pressed"]

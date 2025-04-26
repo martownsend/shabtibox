@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://cfsmrumuc6dx6"]
+
+[ext_resource type="Texture2D" uid="uid://ckncntk2xvbro" path="res://assets/After(Lives).png" id="1_28flt"]
+[ext_resource type="Script" uid="uid://cvqv1dk25bl5w" path="res://Scenes/tjaaaa_button_layer.gd" id="2_ce3w2"]
+[ext_resource type="Texture2D" uid="uid://dju56r54vuwda" path="res://assets/Tjaaaa.png" id="3_n45e2"]
+[ext_resource type="Script" uid="uid://dvrnll8b56mix" path="res://Scenes/tjaaaa.gd" id="4_n45e2"]
+[ext_resource type="Texture2D" uid="uid://cnd5d68vgntcr" path="res://assets/shabti.png" id="5_n45e2"]
+
+[node name="MainMenu" type="Node2D"]
+
+[node name="After(lives)" type="Sprite2D" parent="."]
+position = Vector2(1280, 825)
+texture = ExtResource("1_28flt")
+
+[node name="TjaaaaButtonLayer" type="CanvasLayer" parent="."]
+script = ExtResource("2_ce3w2")
+
+[node name="Tjaaaa" type="TextureButton" parent="TjaaaaButtonLayer"]
+offset_left = 784.0
+offset_top = 779.0
+offset_right = 2704.0
+offset_bottom = 1859.0
+scale = Vector2(0.92, 0.92)
+texture_normal = ExtResource("3_n45e2")
+script = ExtResource("4_n45e2")
+
+[node name="HorButtonLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureButton" type="TextureButton" parent="HorButtonLayer"]
+offset_left = 1441.0
+offset_top = 735.0
+offset_right = 2191.0
+offset_bottom = 2363.0
+scale = Vector2(0.496011, 0.489569)
+texture_normal = ExtResource("5_n45e2")
+
+[connection signal="pressed" from="TjaaaaButtonLayer/Tjaaaa" to="TjaaaaButtonLayer/Tjaaaa" method="_on_pressed"]

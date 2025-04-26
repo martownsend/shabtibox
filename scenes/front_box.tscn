@@ -1,0 +1,52 @@
+[gd_scene load_steps=9 format=3 uid="uid://cgau2l1mxrmak"]
+
+[ext_resource type="Texture2D" uid="uid://dwddam0bqh4fm" path="res://assets/Shabti_Box_ (12).png" id="1_u8g3a"]
+[ext_resource type="Texture2D" uid="uid://birorvcwdvuxg" path="res://assets/eye_plain.png" id="2_o5ah4"]
+[ext_resource type="Texture2D" uid="uid://cmr80r7stfq2e" path="res://assets/eye_plain_hover.png" id="3_1ovqo"]
+[ext_resource type="Texture2D" uid="uid://cwb2o1f07b48a" path="res://assets/testlabel_2.png" id="4_o5ah4"]
+[ext_resource type="Texture2D" uid="uid://cdamfas1uke4m" path="res://assets/handpoint.png" id="6_ldotr"]
+[ext_resource type="Script" uid="uid://dbxk1vf8f240m" path="res://Scenes/label_1.gd" id="6_o5ah4"]
+[ext_resource type="Script" uid="uid://dkb2brrm8qwl4" path="res://Scenes/next_1.gd" id="6_orkfw"]
+[ext_resource type="Texture2D" uid="uid://dke1s3fghqulh" path="res://assets/handpoint_press.png" id="8_1ovqo"]
+
+[node name="FrontBox" type="Node2D"]
+
+[node name="ShabtiBox(12)" type="Sprite2D" parent="."]
+position = Vector2(1242, 837)
+scale = Vector2(1.5619, 1.5619)
+texture = ExtResource("1_u8g3a")
+
+[node name="Label1" type="CanvasLayer" parent="."]
+
+[node name="Label1Button" type="TextureButton" parent="Label1"]
+offset_left = 526.0
+offset_top = 157.0
+offset_right = 2446.0
+offset_bottom = 2077.0
+scale = Vector2(0.159996, 0.137141)
+texture_normal = ExtResource("2_o5ah4")
+texture_hover = ExtResource("3_1ovqo")
+
+[node name="Label1" type="Sprite2D" parent="Label1/Label1Button"]
+visible = false
+position = Vector2(4256.36, 8290.74)
+scale = Vector2(7.96984, 11.2917)
+texture = ExtResource("4_o5ah4")
+script = ExtResource("6_o5ah4")
+
+[node name="NextLayer_1" type="CanvasLayer" parent="."]
+
+[node name="NextButton_1" type="TextureButton" parent="NextLayer_1"]
+offset_left = 2281.0
+offset_top = 65.0
+offset_right = 4201.0
+offset_bottom = 1985.0
+scale = Vector2(0.08, 0.08)
+texture_normal = ExtResource("6_ldotr")
+texture_hover = ExtResource("8_1ovqo")
+
+[node name="Next_1" type="Sprite2D" parent="NextLayer_1/NextButton_1"]
+script = ExtResource("6_orkfw")
+
+[connection signal="pressed" from="Label1/Label1Button" to="Label1/Label1Button/Label1" method="_on_label_1_button_pressed"]
+[connection signal="pressed" from="NextLayer_1/NextButton_1" to="NextLayer_1/NextButton_1/Next_1" method="_on_next_1_pressed"]

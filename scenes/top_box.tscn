@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://bp8qss0tshfcx"]
+
+[ext_resource type="Texture2D" uid="uid://beu4ahtq1q2ry" path="res://assets/Shabti_Box_ (4).png" id="1_y5vma"]
+[ext_resource type="Texture2D" uid="uid://dke1s3fghqulh" path="res://assets/handpoint_press.png" id="2_re3c5"]
+[ext_resource type="Texture2D" uid="uid://cdamfas1uke4m" path="res://assets/handpoint.png" id="3_kwowg"]
+[ext_resource type="Script" uid="uid://cawmn2euff4n8" path="res://Scenes/back_button_2.gd" id="4_l01xv"]
+[ext_resource type="Script" uid="uid://cksx70yymvd6l" path="res://Scenes/next_button_3.gd" id="5_kwowg"]
+
+[node name="top_box" type="Node2D"]
+
+[node name="ShabtiBox(4)" type="Sprite2D" parent="."]
+position = Vector2(1277, 834)
+scale = Vector2(1.56551, 1.56551)
+texture = ExtResource("1_y5vma")
+
+[node name="BackLayer_2" type="CanvasLayer" parent="."]
+
+[node name="BackButton_2" type="TextureButton" parent="BackLayer_2"]
+offset_left = 305.0
+offset_top = 75.0
+offset_right = 2225.0
+offset_bottom = 1995.0
+rotation = 3.14159
+scale = Vector2(0.08, -0.08)
+texture_normal = ExtResource("2_re3c5")
+texture_hover = ExtResource("3_kwowg")
+script = ExtResource("4_l01xv")
+
+[node name="NexLayer3" type="CanvasLayer" parent="."]
+
+[node name="NextButton_3" type="TextureButton" parent="NexLayer3"]
+offset_left = 2281.0
+offset_top = 65.0
+offset_right = 4201.0
+offset_bottom = 1985.0
+scale = Vector2(0.08, 0.08)
+texture_normal = ExtResource("3_kwowg")
+texture_hover = ExtResource("2_re3c5")
+script = ExtResource("5_kwowg")
+
+[connection signal="pressed" from="BackLayer_2/BackButton_2" to="BackLayer_2/BackButton_2" method="_on_pressed"]
+[connection signal="pressed" from="NexLayer3/NextButton_3" to="NexLayer3/NextButton_3" method="_on_pressed"]
