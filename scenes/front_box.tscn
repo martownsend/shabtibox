@@ -1,13 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://cgau2l1mxrmak"]
+[gd_scene load_steps=11 format=3 uid="uid://cgau2l1mxrmak"]
 
 [ext_resource type="Texture2D" uid="uid://dwddam0bqh4fm" path="res://assets/Shabti_Box_ (12).png" id="1_u8g3a"]
-[ext_resource type="Texture2D" uid="uid://birorvcwdvuxg" path="res://assets/eye_plain.png" id="2_o5ah4"]
-[ext_resource type="Texture2D" uid="uid://cmr80r7stfq2e" path="res://assets/eye_plain_hover.png" id="3_1ovqo"]
+[ext_resource type="Texture2D" uid="uid://drdi402ufj7hr" path="res://assets/lookicon_normalpng.png" id="2_o5ah4"]
+[ext_resource type="Texture2D" uid="uid://cc3xjt4pc3gjy" path="res://assets/lookicon_hover.png" id="3_1ovqo"]
 [ext_resource type="Texture2D" uid="uid://cwb2o1f07b48a" path="res://assets/testlabel_2.png" id="4_o5ah4"]
 [ext_resource type="Texture2D" uid="uid://cdamfas1uke4m" path="res://assets/handpoint.png" id="6_ldotr"]
 [ext_resource type="Script" uid="uid://dbxk1vf8f240m" path="res://Scenes/label_1.gd" id="6_o5ah4"]
 [ext_resource type="Script" uid="uid://dkb2brrm8qwl4" path="res://Scenes/next_1.gd" id="6_orkfw"]
 [ext_resource type="Texture2D" uid="uid://dke1s3fghqulh" path="res://assets/handpoint_press.png" id="8_1ovqo"]
+[ext_resource type="Script" uid="uid://3hevh3s0kam5" path="res://Scenes/label_2.gd" id="9_1ovqo"]
+[ext_resource type="Texture2D" uid="uid://d3a6q2jdr08k5" path="res://assets/Tja-aa_Name_Label.png" id="9_v38wu"]
 
 [node name="FrontBox" type="Node2D"]
 
@@ -17,13 +19,14 @@ scale = Vector2(1.5619, 1.5619)
 texture = ExtResource("1_u8g3a")
 
 [node name="Label1" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Label1Button" type="TextureButton" parent="Label1"]
-offset_left = 526.0
-offset_top = 157.0
-offset_right = 2446.0
-offset_bottom = 2077.0
-scale = Vector2(0.159996, 0.137141)
+offset_left = 466.0
+offset_top = 214.0
+offset_right = 1097.0
+offset_bottom = 703.0
+scale = Vector2(0.486659, 0.417141)
 texture_normal = ExtResource("2_o5ah4")
 texture_hover = ExtResource("3_1ovqo")
 
@@ -48,5 +51,24 @@ texture_hover = ExtResource("8_1ovqo")
 [node name="Next_1" type="Sprite2D" parent="NextLayer_1/NextButton_1"]
 script = ExtResource("6_orkfw")
 
+[node name="Label2" type="CanvasLayer" parent="."]
+
+[node name="Label2Button" type="TextureButton" parent="Label2"]
+offset_left = 1794.0
+offset_top = 443.0
+offset_right = 2425.0
+offset_bottom = 932.0
+scale = Vector2(0.478261, 0.439999)
+texture_normal = ExtResource("2_o5ah4")
+texture_pressed = ExtResource("3_1ovqo")
+
+[node name="Label2" type="Sprite2D" parent="Label2/Label2Button"]
+visible = false
+position = Vector2(-1068.46, 1850)
+scale = Vector2(2.90909, 2.90909)
+texture = ExtResource("9_v38wu")
+script = ExtResource("9_1ovqo")
+
 [connection signal="pressed" from="Label1/Label1Button" to="Label1/Label1Button/Label1" method="_on_label_1_button_pressed"]
 [connection signal="pressed" from="NextLayer_1/NextButton_1" to="NextLayer_1/NextButton_1/Next_1" method="_on_next_1_pressed"]
+[connection signal="pressed" from="Label2/Label2Button" to="Label2/Label2Button/Label2" method="_on_label_2_button_pressed"]
