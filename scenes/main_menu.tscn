@@ -1,37 +1,55 @@
-[gd_scene load_steps=6 format=3 uid="uid://cfsmrumuc6dx6"]
+[gd_scene load_steps=10 format=3 uid="uid://cfsmrumuc6dx6"]
 
-[ext_resource type="Texture2D" uid="uid://ckncntk2xvbro" path="res://assets/After(Lives).png" id="1_28flt"]
+[ext_resource type="Texture2D" uid="uid://dvx46prnyta08" path="res://assets/MainMenuBG.png" id="1_opfnp"]
 [ext_resource type="Script" uid="uid://cvqv1dk25bl5w" path="res://Scenes/tjaaaa_button_layer.gd" id="2_ce3w2"]
-[ext_resource type="Texture2D" uid="uid://dju56r54vuwda" path="res://assets/Tjaaaa.png" id="3_n45e2"]
+[ext_resource type="Texture2D" uid="uid://d15qwn14i7nuq" path="res://assets/Box.png" id="3_opfnp"]
 [ext_resource type="Script" uid="uid://dvrnll8b56mix" path="res://Scenes/tjaaaa.gd" id="4_n45e2"]
-[ext_resource type="Texture2D" uid="uid://cnd5d68vgntcr" path="res://assets/shabti.png" id="5_n45e2"]
+[ext_resource type="Texture2D" uid="uid://bfvcy330rweot" path="res://assets/Box_Hover.png" id="4_trj04"]
+[ext_resource type="Texture2D" uid="uid://cks577xyn5ids" path="res://assets/Hor.png" id="5_cp0ys"]
+[ext_resource type="Texture2D" uid="uid://bt54yjb1bp5ho" path="res://assets/amulet.png" id="6_yhxw7"]
+[ext_resource type="Texture2D" uid="uid://cgboyohoqditq" path="res://assets/Hor_Hover.png" id="7_16hvj"]
+[ext_resource type="Texture2D" uid="uid://dfsbrtt7n4vll" path="res://assets/amulet_hover.png" id="9_vr1f0"]
 
 [node name="MainMenu" type="Node2D"]
 
 [node name="After(lives)" type="Sprite2D" parent="."]
-position = Vector2(1280, 825)
-texture = ExtResource("1_28flt")
+position = Vector2(1288, 844)
+scale = Vector2(1.62356, 1.6259)
+texture = ExtResource("1_opfnp")
 
 [node name="TjaaaaButtonLayer" type="CanvasLayer" parent="."]
 script = ExtResource("2_ce3w2")
 
 [node name="Tjaaaa" type="TextureButton" parent="TjaaaaButtonLayer"]
-offset_left = 784.0
-offset_top = 779.0
-offset_right = 2704.0
-offset_bottom = 1859.0
-scale = Vector2(0.92, 0.92)
-texture_normal = ExtResource("3_n45e2")
+offset_left = 109.0
+offset_top = 760.0
+offset_right = 5293.0
+offset_bottom = 4216.0
+scale = Vector2(0.199999, 0.199999)
+texture_normal = ExtResource("3_opfnp")
+texture_hover = ExtResource("4_trj04")
 script = ExtResource("4_n45e2")
 
 [node name="HorButtonLayer" type="CanvasLayer" parent="."]
 
 [node name="TextureButton" type="TextureButton" parent="HorButtonLayer"]
-offset_left = 1441.0
-offset_top = 735.0
-offset_right = 2191.0
-offset_bottom = 2363.0
-scale = Vector2(0.496011, 0.489569)
-texture_normal = ExtResource("5_n45e2")
+offset_left = 1180.0
+offset_top = 687.0
+offset_right = 2427.0
+offset_bottom = 3456.0
+scale = Vector2(0.252853, 0.249569)
+texture_normal = ExtResource("5_cp0ys")
+texture_hover = ExtResource("7_16hvj")
+
+[node name="AmuletLayer" type="CanvasLayer" parent="."]
+
+[node name="AmuletButton" type="TextureButton" parent="AmuletLayer"]
+offset_left = 1519.0
+offset_top = 693.0
+offset_right = 6703.0
+offset_bottom = 4149.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("6_yhxw7")
+texture_hover = ExtResource("9_vr1f0")
 
 [connection signal="pressed" from="TjaaaaButtonLayer/Tjaaaa" to="TjaaaaButtonLayer/Tjaaaa" method="_on_pressed"]

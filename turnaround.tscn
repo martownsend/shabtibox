@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://bwd2hku5no1p0"]
 
 [ext_resource type="VideoStream" uid="uid://b2lbfhut3xlpo" path="res://assets/turntabletest.ogv" id="1_c5n4h"]
-[ext_resource type="Texture2D" uid="uid://ivtl1cw7tfa7" path="res://assets/Close.png" id="2_lg7xf"]
-[ext_resource type="Texture2D" uid="uid://m0kd6hk0efol" path="res://assets/Close_Hover.png" id="3_5kw0q"]
+[ext_resource type="Texture2D" uid="uid://cdamfas1uke4m" path="res://assets/handpoint.png" id="2_lg7xf"]
+[ext_resource type="Texture2D" uid="uid://dke1s3fghqulh" path="res://assets/handpoint_press.png" id="3_5kw0q"]
 [ext_resource type="Script" uid="uid://dqsburt0v6dbo" path="res://main_menu_button.gd" id="4_kyb1y"]
 
 [node name="Turnaround" type="Node2D"]
@@ -20,11 +20,11 @@ loop = true
 [node name="MainMenuLayer" type="CanvasLayer" parent="."]
 
 [node name="MainMenuButton" type="TextureButton" parent="MainMenuLayer"]
-offset_left = 174.0
-offset_top = 1086.0
-offset_right = 1824.0
-offset_bottom = 2361.0
-scale = Vector2(0.24, 0.24)
+offset_left = 538.0
+offset_top = 26.0001
+offset_right = 2458.0
+offset_bottom = 1946.0
+scale = Vector2(-0.24, 0.24)
 texture_normal = ExtResource("2_lg7xf")
 texture_hover = ExtResource("3_5kw0q")
 script = ExtResource("4_kyb1y")

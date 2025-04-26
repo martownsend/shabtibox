@@ -60,7 +60,7 @@ offset_right = 2425.0
 offset_bottom = 932.0
 scale = Vector2(0.478261, 0.439999)
 texture_normal = ExtResource("2_o5ah4")
-texture_pressed = ExtResource("3_1ovqo")
+texture_hover = ExtResource("3_1ovqo")
 
 [node name="Label2" type="Sprite2D" parent="Label2/Label2Button"]
 visible = false
