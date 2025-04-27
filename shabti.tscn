@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://75tinfd8agqr"]
+
+[ext_resource type="Texture2D" uid="uid://u512160sye3v" path="res://assets/bg.png" id="1_31wg8"]
+[ext_resource type="Texture2D" uid="uid://cks577xyn5ids" path="res://assets/Hor.png" id="2_4hba4"]
+
+[node name="Shabti" type="Node2D"]
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(1294, 868)
+scale = Vector2(1.55544, 2)
+texture = ExtResource("1_31wg8")
+
+[node name="Hor" type="Sprite2D" parent="."]
+position = Vector2(1265, 854)
+scale = Vector2(0.44, 0.44)
+texture = ExtResource("2_4hba4")

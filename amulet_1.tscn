@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://s6yx8kwuaj13"]
+
+[ext_resource type="Texture2D" uid="uid://u512160sye3v" path="res://assets/bg.png" id="1_t2pcn"]
+[ext_resource type="Texture2D" uid="uid://bt54yjb1bp5ho" path="res://assets/amulet.png" id="2_aaevf"]
+
+[node name="Amulet1" type="Node2D"]
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(1285.5, 864)
+scale = Vector2(1.42448, 1.7037)
+texture = ExtResource("1_t2pcn")
+
+[node name="Amulet" type="Sprite2D" parent="."]
+position = Vector2(1241, 843)
+scale = Vector2(0.399999, 0.399999)
+texture = ExtResource("2_aaevf")

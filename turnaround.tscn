@@ -20,13 +20,22 @@ loop = true
 [node name="MainMenuLayer" type="CanvasLayer" parent="."]
 
 [node name="MainMenuButton" type="TextureButton" parent="MainMenuLayer"]
-offset_left = 538.0
-offset_top = 26.0001
-offset_right = 2458.0
-offset_bottom = 1946.0
-scale = Vector2(-0.24, 0.24)
+offset_left = 404.0
+offset_top = 34.0
+offset_right = 2324.0
+offset_bottom = 1954.0
+scale = Vector2(-0.128, 0.128)
 texture_normal = ExtResource("2_lg7xf")
 texture_hover = ExtResource("3_5kw0q")
 script = ExtResource("4_kyb1y")
+
+[node name="Label" type="Label" parent="MainMenuLayer"]
+offset_left = 120.0
+offset_top = 262.0
+offset_right = 640.0
+offset_bottom = 339.0
+scale = Vector2(0.8, 0.8)
+theme_override_font_sizes/font_size = 56
+text = "Back to Main Menu"
 
 [connection signal="pressed" from="MainMenuLayer/MainMenuButton" to="MainMenuLayer/MainMenuButton" method="_on_pressed"]

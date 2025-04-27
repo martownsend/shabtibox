@@ -14,8 +14,8 @@
 [node name="FrontBox" type="Node2D"]
 
 [node name="ShabtiBox(12)" type="Sprite2D" parent="."]
-position = Vector2(1242, 837)
-scale = Vector2(1.5619, 1.5619)
+position = Vector2(1299, 831)
+scale = Vector2(1.51423, 1.59387)
 texture = ExtResource("1_u8g3a")
 
 [node name="Label1" type="CanvasLayer" parent="."]
@@ -54,17 +54,17 @@ script = ExtResource("6_orkfw")
 [node name="Label2" type="CanvasLayer" parent="."]
 
 [node name="Label2Button" type="TextureButton" parent="Label2"]
-offset_left = 1794.0
-offset_top = 443.0
-offset_right = 2425.0
-offset_bottom = 932.0
+offset_left = 483.0
+offset_top = 241.0
+offset_right = 1114.0
+offset_bottom = 730.0
 scale = Vector2(0.478261, 0.439999)
 texture_normal = ExtResource("2_o5ah4")
 texture_hover = ExtResource("3_1ovqo")
 
 [node name="Label2" type="Sprite2D" parent="Label2/Label2Button"]
 visible = false
-position = Vector2(-1068.46, 1850)
+position = Vector2(1641.36, 2372.73)
 scale = Vector2(2.90909, 2.90909)
 texture = ExtResource("9_v38wu")
 script = ExtResource("9_1ovqo")

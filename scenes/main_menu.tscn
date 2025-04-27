@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cfsmrumuc6dx6"]
+[gd_scene load_steps=12 format=3 uid="uid://cfsmrumuc6dx6"]
 
 [ext_resource type="Texture2D" uid="uid://dvx46prnyta08" path="res://assets/MainMenuBG.png" id="1_opfnp"]
 [ext_resource type="Script" uid="uid://cvqv1dk25bl5w" path="res://Scenes/tjaaaa_button_layer.gd" id="2_ce3w2"]
@@ -8,7 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://cks577xyn5ids" path="res://assets/Hor.png" id="5_cp0ys"]
 [ext_resource type="Texture2D" uid="uid://bt54yjb1bp5ho" path="res://assets/amulet.png" id="6_yhxw7"]
 [ext_resource type="Texture2D" uid="uid://cgboyohoqditq" path="res://assets/Hor_Hover.png" id="7_16hvj"]
+[ext_resource type="Script" uid="uid://dq8xmi835hev6" path="res://Scenes/texture_button.gd" id="8_16hvj"]
 [ext_resource type="Texture2D" uid="uid://dfsbrtt7n4vll" path="res://assets/amulet_hover.png" id="9_vr1f0"]
+[ext_resource type="Script" uid="uid://ca82uhlqbpk0x" path="res://Scenes/amulet_button.gd" id="11_vr1f0"]
 
 [node name="MainMenu" type="Node2D"]
 
@@ -21,10 +23,10 @@ texture = ExtResource("1_opfnp")
 script = ExtResource("2_ce3w2")
 
 [node name="Tjaaaa" type="TextureButton" parent="TjaaaaButtonLayer"]
-offset_left = 109.0
-offset_top = 760.0
-offset_right = 5293.0
-offset_bottom = 4216.0
+offset_left = 767.0
+offset_top = 714.0
+offset_right = 5951.0
+offset_bottom = 4170.0
 scale = Vector2(0.199999, 0.199999)
 texture_normal = ExtResource("3_opfnp")
 texture_hover = ExtResource("4_trj04")
@@ -32,24 +34,28 @@ script = ExtResource("4_n45e2")
 
 [node name="HorButtonLayer" type="CanvasLayer" parent="."]
 
-[node name="TextureButton" type="TextureButton" parent="HorButtonLayer"]
-offset_left = 1180.0
-offset_top = 687.0
-offset_right = 2427.0
-offset_bottom = 3456.0
+[node name="HorButton" type="TextureButton" parent="HorButtonLayer"]
+offset_left = 278.0
+offset_top = 709.0
+offset_right = 1525.0
+offset_bottom = 3478.0
 scale = Vector2(0.252853, 0.249569)
 texture_normal = ExtResource("5_cp0ys")
 texture_hover = ExtResource("7_16hvj")
+script = ExtResource("8_16hvj")
 
 [node name="AmuletLayer" type="CanvasLayer" parent="."]
 
 [node name="AmuletButton" type="TextureButton" parent="AmuletLayer"]
-offset_left = 1519.0
-offset_top = 693.0
-offset_right = 6703.0
-offset_bottom = 4149.0
+offset_left = 1611.0
+offset_top = 703.0
+offset_right = 6795.0
+offset_bottom = 4159.0
 scale = Vector2(0.2, 0.2)
 texture_normal = ExtResource("6_yhxw7")
 texture_hover = ExtResource("9_vr1f0")
+script = ExtResource("11_vr1f0")
 
 [connection signal="pressed" from="TjaaaaButtonLayer/Tjaaaa" to="TjaaaaButtonLayer/Tjaaaa" method="_on_pressed"]
+[connection signal="pressed" from="HorButtonLayer/HorButton" to="HorButtonLayer/HorButton" method="_on_pressed"]
+[connection signal="pressed" from="AmuletLayer/AmuletButton" to="AmuletLayer/AmuletButton" method="_on_pressed"]
