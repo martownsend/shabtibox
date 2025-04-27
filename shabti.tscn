@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://75tinfd8agqr"]
+[gd_scene load_steps=6 format=3 uid="uid://75tinfd8agqr"]
 
 [ext_resource type="Texture2D" uid="uid://u512160sye3v" path="res://assets/bg.png" id="1_31wg8"]
 [ext_resource type="Texture2D" uid="uid://cks577xyn5ids" path="res://assets/Hor.png" id="2_4hba4"]
+[ext_resource type="Texture2D" uid="uid://dke1s3fghqulh" path="res://assets/handpoint_press.png" id="3_7rab6"]
+[ext_resource type="Texture2D" uid="uid://cdamfas1uke4m" path="res://assets/handpoint.png" id="4_kw5oc"]
+[ext_resource type="Script" uid="uid://dvffc1cay8rfn" path="res://shabtibacktomain.gd" id="5_7rab6"]
 
 [node name="Shabti" type="Node2D"]
 
@@ -14,3 +17,18 @@ texture = ExtResource("1_31wg8")
 position = Vector2(1265, 854)
 scale = Vector2(0.44, 0.44)
 texture = ExtResource("2_4hba4")
+
+[node name="shabti_backtomainlayer" type="CanvasLayer" parent="."]
+
+[node name="backtomainbutton" type="TextureButton" parent="shabti_backtomainlayer"]
+offset_left = 403.0
+offset_top = 59.0
+offset_right = 2323.0
+offset_bottom = 1979.0
+scale = Vector2(-0.12, 0.12)
+texture_normal = ExtResource("3_7rab6")
+texture_hover = ExtResource("4_kw5oc")
+script = ExtResource("5_7rab6")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="shabti_backtomainlayer/backtomainbutton" to="shabti_backtomainlayer/backtomainbutton" method="_on_pressed"]

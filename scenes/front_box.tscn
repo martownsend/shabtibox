@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cgau2l1mxrmak"]
+[gd_scene load_steps=12 format=3 uid="uid://cgau2l1mxrmak"]
 
 [ext_resource type="Texture2D" uid="uid://dwddam0bqh4fm" path="res://assets/Shabti_Box_ (12).png" id="1_u8g3a"]
 [ext_resource type="Texture2D" uid="uid://drdi402ufj7hr" path="res://assets/lookicon_normalpng.png" id="2_o5ah4"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dke1s3fghqulh" path="res://assets/handpoint_press.png" id="8_1ovqo"]
 [ext_resource type="Script" uid="uid://3hevh3s0kam5" path="res://Scenes/label_2.gd" id="9_1ovqo"]
 [ext_resource type="Texture2D" uid="uid://d3a6q2jdr08k5" path="res://assets/Tja-aa_Name_Label.png" id="9_v38wu"]
+[ext_resource type="Script" uid="uid://kti3lmrut2wb" path="res://Scenes/box_backtomain.gd" id="11_8gqjk"]
 
 [node name="FrontBox" type="Node2D"]
 
@@ -69,6 +70,20 @@ scale = Vector2(2.90909, 2.90909)
 texture = ExtResource("9_v38wu")
 script = ExtResource("9_1ovqo")
 
+[node name="box_backtomainlayer" type="CanvasLayer" parent="."]
+
+[node name="box_backtomain" type="TextureButton" parent="box_backtomainlayer"]
+offset_left = 305.0
+offset_top = 75.0
+offset_right = 2225.0
+offset_bottom = 1995.0
+scale = Vector2(-0.078, 0.08)
+texture_normal = ExtResource("8_1ovqo")
+texture_hover = ExtResource("6_ldotr")
+script = ExtResource("11_8gqjk")
+metadata/_edit_use_anchors_ = true
+
 [connection signal="pressed" from="Label1/Label1Button" to="Label1/Label1Button/Label1" method="_on_label_1_button_pressed"]
 [connection signal="pressed" from="NextLayer_1/NextButton_1" to="NextLayer_1/NextButton_1/Next_1" method="_on_next_1_pressed"]
 [connection signal="pressed" from="Label2/Label2Button" to="Label2/Label2Button/Label2" method="_on_label_2_button_pressed"]
+[connection signal="pressed" from="box_backtomainlayer/box_backtomain" to="box_backtomainlayer/box_backtomain" method="_on_pressed"]

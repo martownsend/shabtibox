@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://s6yx8kwuaj13"]
+[gd_scene load_steps=6 format=3 uid="uid://s6yx8kwuaj13"]
 
 [ext_resource type="Texture2D" uid="uid://u512160sye3v" path="res://assets/bg.png" id="1_t2pcn"]
 [ext_resource type="Texture2D" uid="uid://bt54yjb1bp5ho" path="res://assets/amulet.png" id="2_aaevf"]
+[ext_resource type="Texture2D" uid="uid://dke1s3fghqulh" path="res://assets/handpoint_press.png" id="3_4wwmo"]
+[ext_resource type="Texture2D" uid="uid://cdamfas1uke4m" path="res://assets/handpoint.png" id="4_bd27p"]
+[ext_resource type="Script" uid="uid://vik62xsfx6ia" path="res://amulet_backtomain.gd" id="5_4wr10"]
 
 [node name="Amulet1" type="Node2D"]
 
@@ -14,3 +17,18 @@ texture = ExtResource("1_t2pcn")
 position = Vector2(1241, 843)
 scale = Vector2(0.399999, 0.399999)
 texture = ExtResource("2_aaevf")
+
+[node name="amulet_backtomainlayer" type="CanvasLayer" parent="."]
+
+[node name="amulet_backtomain" type="TextureButton" parent="amulet_backtomainlayer"]
+offset_left = 403.0
+offset_top = 59.0
+offset_right = 2323.0
+offset_bottom = 1979.0
+scale = Vector2(-0.12, 0.12)
+texture_normal = ExtResource("3_4wwmo")
+texture_hover = ExtResource("4_bd27p")
+script = ExtResource("5_4wr10")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="amulet_backtomainlayer/amulet_backtomain" to="amulet_backtomainlayer/amulet_backtomain" method="_on_pressed"]
