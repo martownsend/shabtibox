@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://kxpjpurs1uoc"]
+
+[ext_resource type="Texture2D" uid="uid://u512160sye3v" path="res://assets/bg.png" id="1_al7cf"]
+[ext_resource type="Texture2D" uid="uid://s4u0utfurapa" path="res://assets/anubis.png" id="2_ce1o1"]
+[ext_resource type="Texture2D" uid="uid://dke1s3fghqulh" path="res://assets/handpoint_press.png" id="3_dovc6"]
+[ext_resource type="Texture2D" uid="uid://cdamfas1uke4m" path="res://assets/handpoint.png" id="4_mvht6"]
+[ext_resource type="Script" uid="uid://bbh7nt3k6dldh" path="res://amulet_back_3_button.gd" id="5_kue6f"]
+[ext_resource type="Texture2D" uid="uid://d2be633prqmni" path="res://assets/ExitButton.png" id="6_d7rpo"]
+[ext_resource type="Texture2D" uid="uid://4ogufpv2aok7" path="res://assets/ExitButton_Hover.png" id="7_e565g"]
+[ext_resource type="Script" uid="uid://vglvwy5qpno4" path="res://main_menu_button_2.gd" id="8_0kmh0"]
+
+[node name="amulet3" type="Node2D"]
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(1278.5, 834.5)
+scale = Vector2(1.40781, 1.59352)
+texture = ExtResource("1_al7cf")
+
+[node name="Anubis" type="Sprite2D" parent="."]
+position = Vector2(1265, 837)
+scale = Vector2(0.436053, 0.436053)
+texture = ExtResource("2_ce1o1")
+
+[node name="amulet_back3" type="CanvasLayer" parent="."]
+
+[node name="amulet_back3button" type="TextureButton" parent="amulet_back3"]
+offset_left = 305.0
+offset_top = 75.0
+offset_right = 2225.0
+offset_bottom = 1995.0
+scale = Vector2(-0.08, 0.08)
+texture_normal = ExtResource("3_dovc6")
+texture_hover = ExtResource("4_mvht6")
+script = ExtResource("5_kue6f")
+metadata/_edit_use_anchors_ = true
+
+[node name="MainMenuLayer2" type="CanvasLayer" parent="."]
+
+[node name="MainMenuButton2" type="TextureButton" parent="MainMenuLayer2"]
+offset_left = 2120.0
+offset_top = 151.0
+offset_right = 4040.0
+offset_bottom = 2071.0
+scale = Vector2(0.128, 0.128)
+texture_normal = ExtResource("6_d7rpo")
+texture_hover = ExtResource("7_e565g")
+script = ExtResource("8_0kmh0")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="MainMenuLayer2"]
+offset_left = 2105.0
+offset_top = 306.0
+offset_right = 2382.0
+offset_bottom = 376.0
+theme_override_font_sizes/font_size = 51
+text = "Main Menu"
+
+[connection signal="pressed" from="amulet_back3/amulet_back3button" to="amulet_back3/amulet_back3button" method="_on_pressed"]
+[connection signal="pressed" from="MainMenuLayer2/MainMenuButton2" to="MainMenuLayer2/MainMenuButton2" method="_on_pressed"]

@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://s6yx8kwuaj13"]
+[gd_scene load_steps=7 format=3 uid="uid://s6yx8kwuaj13"]
 
 [ext_resource type="Texture2D" uid="uid://u512160sye3v" path="res://assets/bg.png" id="1_t2pcn"]
 [ext_resource type="Texture2D" uid="uid://bt54yjb1bp5ho" path="res://assets/amulet.png" id="2_aaevf"]
 [ext_resource type="Texture2D" uid="uid://dke1s3fghqulh" path="res://assets/handpoint_press.png" id="3_4wwmo"]
 [ext_resource type="Texture2D" uid="uid://cdamfas1uke4m" path="res://assets/handpoint.png" id="4_bd27p"]
 [ext_resource type="Script" uid="uid://vik62xsfx6ia" path="res://amulet_backtomain.gd" id="5_4wr10"]
+[ext_resource type="Script" uid="uid://c6fcn602kgf2m" path="res://amuletnext_1_button.gd" id="6_bd27p"]
 
 [node name="Amulet1" type="Node2D"]
 
@@ -21,14 +22,28 @@ texture = ExtResource("2_aaevf")
 [node name="amulet_backtomainlayer" type="CanvasLayer" parent="."]
 
 [node name="amulet_backtomain" type="TextureButton" parent="amulet_backtomainlayer"]
-offset_left = 403.0
-offset_top = 59.0
-offset_right = 2323.0
-offset_bottom = 1979.0
-scale = Vector2(-0.12, 0.12)
+offset_left = 305.0
+offset_top = 75.0
+offset_right = 2225.0
+offset_bottom = 1995.0
+scale = Vector2(-0.08, 0.08)
 texture_normal = ExtResource("3_4wwmo")
 texture_hover = ExtResource("4_bd27p")
 script = ExtResource("5_4wr10")
 metadata/_edit_use_anchors_ = true
 
+[node name="amuletnextlayer1" type="CanvasLayer" parent="."]
+
+[node name="amuletnext1button" type="TextureButton" parent="amuletnextlayer1"]
+offset_left = 2281.0
+offset_top = 65.0
+offset_right = 4201.0
+offset_bottom = 1985.0
+scale = Vector2(0.08, 0.08)
+texture_normal = ExtResource("4_bd27p")
+texture_hover = ExtResource("3_4wwmo")
+script = ExtResource("6_bd27p")
+metadata/_edit_use_anchors_ = true
+
 [connection signal="pressed" from="amulet_backtomainlayer/amulet_backtomain" to="amulet_backtomainlayer/amulet_backtomain" method="_on_pressed"]
+[connection signal="pressed" from="amuletnextlayer1/amuletnext1button" to="amuletnextlayer1/amuletnext1button" method="_on_pressed"]

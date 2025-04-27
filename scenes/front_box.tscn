@@ -55,18 +55,18 @@ script = ExtResource("6_orkfw")
 [node name="Label2" type="CanvasLayer" parent="."]
 
 [node name="Label2Button" type="TextureButton" parent="Label2"]
-offset_left = 483.0
-offset_top = 241.0
-offset_right = 1114.0
-offset_bottom = 730.0
-scale = Vector2(0.478261, 0.439999)
+offset_left = 627.0
+offset_top = 324.0
+offset_right = 1258.0
+offset_bottom = 813.0
+scale = Vector2(0.260872, 0.240002)
 texture_normal = ExtResource("2_o5ah4")
 texture_hover = ExtResource("3_1ovqo")
 
 [node name="Label2" type="Sprite2D" parent="Label2/Label2Button"]
 visible = false
-position = Vector2(1641.36, 2372.73)
-scale = Vector2(2.90909, 2.90909)
+position = Vector2(2510.81, 4012.47)
+scale = Vector2(4.74241, 4.74241)
 texture = ExtResource("9_v38wu")
 script = ExtResource("9_1ovqo")
 
@@ -82,6 +82,16 @@ texture_normal = ExtResource("8_1ovqo")
 texture_hover = ExtResource("6_ldotr")
 script = ExtResource("11_8gqjk")
 metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="box_backtomainlayer/box_backtomain"]
+layout_mode = 0
+offset_left = 1782.05
+offset_top = 1587.5
+offset_right = 3557.05
+offset_bottom = 2032.5
+scale = Vector2(-1, 1)
+theme_override_font_sizes/font_size = 326
+text = "Main Menu"
 
 [connection signal="pressed" from="Label1/Label1Button" to="Label1/Label1Button/Label1" method="_on_label_1_button_pressed"]
 [connection signal="pressed" from="NextLayer_1/NextButton_1" to="NextLayer_1/NextButton_1/Next_1" method="_on_next_1_pressed"]
