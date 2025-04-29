@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://bp8qss0tshfcx"]
+[gd_scene load_steps=7 format=3 uid="uid://bp8qss0tshfcx"]
 
+[ext_resource type="Texture2D" uid="uid://u512160sye3v" path="res://assets/bg.png" id="1_l01xv"]
 [ext_resource type="Texture2D" uid="uid://beu4ahtq1q2ry" path="res://assets/Shabti_Box_ (4).png" id="1_y5vma"]
 [ext_resource type="Texture2D" uid="uid://dke1s3fghqulh" path="res://assets/handpoint_press.png" id="2_re3c5"]
 [ext_resource type="Texture2D" uid="uid://cdamfas1uke4m" path="res://assets/handpoint.png" id="3_kwowg"]
@@ -8,9 +9,14 @@
 
 [node name="top_box" type="Node2D"]
 
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(1296, 842)
+scale = Vector2(1.40215, 1.60926)
+texture = ExtResource("1_l01xv")
+
 [node name="ShabtiBox(4)" type="Sprite2D" parent="."]
-position = Vector2(1277, 834)
-scale = Vector2(1.56551, 1.56551)
+position = Vector2(1279, 816)
+scale = Vector2(1.22649, 1.22289)
 texture = ExtResource("1_y5vma")
 
 [node name="BackLayer_2" type="CanvasLayer" parent="."]

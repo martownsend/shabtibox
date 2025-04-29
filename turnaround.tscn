@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://bwd2hku5no1p0"]
+[gd_scene load_steps=8 format=3 uid="uid://bwd2hku5no1p0"]
 
 [ext_resource type="VideoStream" uid="uid://b2lbfhut3xlpo" path="res://assets/turntabletest.ogv" id="1_c5n4h"]
 [ext_resource type="Texture2D" uid="uid://d2be633prqmni" path="res://assets/ExitButton.png" id="2_lg7xf"]
 [ext_resource type="Texture2D" uid="uid://4ogufpv2aok7" path="res://assets/ExitButton_Hover.png" id="3_5kw0q"]
 [ext_resource type="Script" uid="uid://dqsburt0v6dbo" path="res://main_menu_button.gd" id="4_kyb1y"]
+[ext_resource type="Texture2D" uid="uid://dke1s3fghqulh" path="res://assets/handpoint_press.png" id="5_e2fo8"]
+[ext_resource type="Texture2D" uid="uid://cdamfas1uke4m" path="res://assets/handpoint.png" id="6_6rkc4"]
+[ext_resource type="Script" uid="uid://d4m0am8l8eisp" path="res://back_turnaround.gd" id="7_tjd4s"]
 
 [node name="Turnaround" type="Node2D"]
 
@@ -20,10 +23,10 @@ loop = true
 [node name="MainMenuLayer" type="CanvasLayer" parent="."]
 
 [node name="MainMenuButton" type="TextureButton" parent="MainMenuLayer"]
-offset_left = 202.0
-offset_top = 88.0
-offset_right = 2122.0
-offset_bottom = 2008.0
+offset_left = 2152.0
+offset_top = 106.0
+offset_right = 4072.0
+offset_bottom = 2026.0
 scale = Vector2(0.128, 0.128)
 texture_normal = ExtResource("2_lg7xf")
 texture_hover = ExtResource("3_5kw0q")
@@ -43,4 +46,15 @@ theme_override_font_sizes/font_size = 446
 text = "Main Menu"
 metadata/_edit_use_anchors_ = true
 
+[node name="Back_Turnaround" type="TextureButton" parent="MainMenuLayer"]
+offset_left = 305.0
+offset_top = 75.0
+offset_right = 2225.0
+offset_bottom = 1995.0
+scale = Vector2(-0.08, 0.08)
+texture_normal = ExtResource("5_e2fo8")
+texture_hover = ExtResource("6_6rkc4")
+script = ExtResource("7_tjd4s")
+
 [connection signal="pressed" from="MainMenuLayer/MainMenuButton" to="MainMenuLayer/MainMenuButton" method="_on_pressed"]
+[connection signal="pressed" from="MainMenuLayer/Back_Turnaround" to="MainMenuLayer/Back_Turnaround" method="_on_pressed"]
