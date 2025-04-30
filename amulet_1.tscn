@@ -15,7 +15,7 @@ scale = Vector2(1.42448, 1.7037)
 texture = ExtResource("1_t2pcn")
 
 [node name="Amulet" type="Sprite2D" parent="."]
-position = Vector2(1241, 843)
+position = Vector2(904, 871)
 scale = Vector2(0.399999, 0.399999)
 texture = ExtResource("2_aaevf")
 
