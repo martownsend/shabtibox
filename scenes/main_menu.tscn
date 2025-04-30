@@ -18,8 +18,8 @@
 [node name="MainMenu" type="Node2D"]
 
 [node name="After(lives)" type="Sprite2D" parent="."]
-position = Vector2(1240, 823)
-scale = Vector2(1.57642, 1.57869)
+position = Vector2(1279, 825)
+scale = Vector2(1.60644, 1.57869)
 texture = ExtResource("1_opfnp")
 
 [node name="TjaaaaButtonLayer" type="CanvasLayer" parent="."]
