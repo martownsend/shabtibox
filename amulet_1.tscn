@@ -70,10 +70,10 @@ texture = ExtResource("8_wwcdg")
 [node name="LabelButtons_Osiris" type="CanvasLayer" parent="."]
 
 [node name="IntroductionButton" type="TextureButton" parent="LabelButtons_Osiris"]
-offset_left = 1142.08
-offset_top = 387.717
-offset_right = 1849.08
-offset_bottom = 980.717
+offset_left = 1006.0
+offset_top = 390.0
+offset_right = 1713.0
+offset_bottom = 983.0
 scale = Vector2(0.560001, 0.560001)
 texture_normal = ExtResource("9_br51v")
 
@@ -85,10 +85,10 @@ texture = ExtResource("10_ld7ab")
 script = ExtResource("11_176sy")
 
 [node name="AfterlifeButton" type="TextureButton" parent="LabelButtons_Osiris"]
-offset_left = 1290.08
-offset_top = 779.717
-offset_right = 1610.08
-offset_bottom = 1619.72
+offset_left = 1154.0
+offset_top = 782.0
+offset_right = 1474.0
+offset_bottom = 1622.0
 scale = Vector2(0.239999, 0.239999)
 texture_normal = ExtResource("12_8selb")
 
@@ -100,10 +100,10 @@ texture = ExtResource("13_3r0nn")
 script = ExtResource("14_mwywx")
 
 [node name="IconographyButton" type="TextureButton" parent="LabelButtons_Osiris"]
-offset_left = 1218.08
-offset_top = 1046.72
-offset_right = 1685.08
-offset_bottom = 1771.72
+offset_left = 1082.0
+offset_top = 1049.0
+offset_right = 1549.0
+offset_bottom = 1774.0
 scale = Vector2(0.480001, 0.480001)
 texture_normal = ExtResource("15_d33dg")
 
@@ -124,7 +124,7 @@ texture_normal = ExtResource("18_8qdmg")
 
 [node name="Letter" type="Sprite2D" parent="LabelButtons_Osiris/LetterButton"]
 visible = false
-position = Vector2(3170.83, 243.75)
+position = Vector2(3714.58, 272.917)
 scale = Vector2(3.5, 3.5)
 texture = ExtResource("19_rblqk")
 script = ExtResource("18_1dpvg")

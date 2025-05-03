@@ -62,40 +62,40 @@ metadata/_edit_use_anchors_ = true
 [node name="ButtonLayer_Isis" type="CanvasLayer" parent="."]
 
 [node name="IntroButtonIsis" type="TextureButton" parent="ButtonLayer_Isis"]
-offset_left = 1288.0
-offset_top = 410.0
-offset_right = 1648.0
-offset_bottom = 786.0
+offset_left = 1117.0
+offset_top = 403.0
+offset_right = 1477.0
+offset_bottom = 779.0
 scale = Vector2(0.68, 0.68)
 texture_normal = ExtResource("7_3no3c")
 
 [node name="IntroIsis" type="Sprite2D" parent="ButtonLayer_Isis/IntroButtonIsis"]
 visible = false
-position = Vector2(1063.24, 64.7059)
+position = Vector2(1063.24, 164.706)
 scale = Vector2(1.88471, 1.88471)
 texture = ExtResource("8_sphwm")
 script = ExtResource("9_oe56x")
 
 [node name="AfterlifeIsisButton" type="TextureButton" parent="ButtonLayer_Isis"]
-offset_left = 1337.0
-offset_top = 750.0
-offset_right = 1821.0
-offset_bottom = 1770.0
+offset_left = 1166.0
+offset_top = 743.0
+offset_right = 1650.0
+offset_bottom = 1763.0
 scale = Vector2(0.32, 0.32)
 texture_normal = ExtResource("10_hk6ae")
 
 [node name="AfterlifeIsis" type="Sprite2D" parent="ButtonLayer_Isis/AfterlifeIsisButton"]
 visible = false
-position = Vector2(2118.75, 300)
+position = Vector2(2118.75, 412.5)
 scale = Vector2(4.05098, 4.05098)
 texture = ExtResource("11_jnhv0")
 script = ExtResource("12_7jy5d")
 
 [node name="IconIsisButton" type="TextureButton" parent="ButtonLayer_Isis"]
-offset_left = 1299.0
-offset_top = 1142.0
-offset_right = 2152.0
-offset_bottom = 2422.0
+offset_left = 1128.0
+offset_top = 1135.0
+offset_right = 1981.0
+offset_bottom = 2415.0
 scale = Vector2(0.280003, 0.280003)
 texture_normal = ExtResource("13_7jy5d")
 
@@ -116,7 +116,7 @@ texture_normal = ExtResource("16_stpoi")
 
 [node name="LetterIsis" type="Sprite2D" parent="ButtonLayer_Isis/LetterIsisButton"]
 visible = false
-position = Vector2(3197.16, 210.178)
+position = Vector2(3675, 233.333)
 scale = Vector2(3.37347, 3.37347)
 texture = ExtResource("17_kjt32")
 script = ExtResource("18_l2847")
