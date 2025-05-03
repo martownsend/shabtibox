@@ -69,6 +69,7 @@ offset_top = 1587.5
 offset_right = 3557.05
 offset_bottom = 2032.5
 scale = Vector2(-1, 1)
+theme_override_colors/font_color = Color(0.807919, 0.627132, 0.548774, 1)
 theme_override_font_sizes/font_size = 326
 text = "Main Menu"
 
@@ -77,6 +78,7 @@ offset_left = 2283.0
 offset_top = 198.0
 offset_right = 2370.0
 offset_bottom = 225.0
+theme_override_colors/font_color = Color(0.60748, 0.787361, 0.684282, 1)
 theme_override_font_sizes/font_size = 30
 text = "Next Side"
 
