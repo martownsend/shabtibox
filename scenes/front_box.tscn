@@ -77,6 +77,7 @@ offset_left = 2283.0
 offset_top = 198.0
 offset_right = 2370.0
 offset_bottom = 225.0
+theme_override_font_sizes/font_size = 30
 text = "Next Side"
 
 [connection signal="pressed" from="NextLayer_1/NextButton_1" to="NextLayer_1/NextButton_1/Next_1" method="_on_next_1_pressed"]

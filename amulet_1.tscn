@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://s6yx8kwuaj13"]
+[gd_scene load_steps=21 format=3 uid="uid://s6yx8kwuaj13"]
 
 [ext_resource type="Texture2D" uid="uid://u512160sye3v" path="res://assets/bg.png" id="1_t2pcn"]
 [ext_resource type="Texture2D" uid="uid://bt54yjb1bp5ho" path="res://assets/amulet.png" id="2_aaevf"]
@@ -6,6 +6,20 @@
 [ext_resource type="Texture2D" uid="uid://cdamfas1uke4m" path="res://assets/handpoint.png" id="4_bd27p"]
 [ext_resource type="Script" uid="uid://vik62xsfx6ia" path="res://amulet_backtomain.gd" id="5_4wr10"]
 [ext_resource type="Script" uid="uid://c6fcn602kgf2m" path="res://amuletnext_1_button.gd" id="6_bd27p"]
+[ext_resource type="Texture2D" uid="uid://dt7uyy8fyjun3" path="res://assets/osiris_english_text.png" id="7_v41mf"]
+[ext_resource type="Texture2D" uid="uid://dws87sxd01thw" path="res://assets/osirisname_text.png" id="8_wwcdg"]
+[ext_resource type="Texture2D" uid="uid://bmpsu7xo12rcq" path="res://assets/crookandflail.png" id="9_br51v"]
+[ext_resource type="Texture2D" uid="uid://dlgoat806cl36" path="res://assets/label 1 osiris.png" id="10_ld7ab"]
+[ext_resource type="Script" uid="uid://blsiof3dbtki1" path="res://introduction.gd" id="11_176sy"]
+[ext_resource type="Texture2D" uid="uid://7t1yy4eg6i04" path="res://assets/djed.png" id="12_8selb"]
+[ext_resource type="Texture2D" uid="uid://btwxxdlwfiyct" path="res://assets/label 2 osiris.png" id="13_3r0nn"]
+[ext_resource type="Script" uid="uid://cibsbqbvfbfr8" path="res://afterlife.gd" id="14_mwywx"]
+[ext_resource type="Texture2D" uid="uid://ni80rsothce" path="res://assets/osirisatef.png" id="15_d33dg"]
+[ext_resource type="Texture2D" uid="uid://byyqqu45ito7d" path="res://assets/label 3 osiris.png" id="16_1dpvg"]
+[ext_resource type="Script" uid="uid://d0p8510lmcyb1" path="res://iconography.gd" id="17_3eo4j"]
+[ext_resource type="Script" uid="uid://bjetnjdsflrpx" path="res://letter.gd" id="18_1dpvg"]
+[ext_resource type="Texture2D" uid="uid://m0ey380h2lod" path="res://assets/letter.png" id="18_8qdmg"]
+[ext_resource type="Texture2D" uid="uid://c7rhabwtll2jy" path="res://assets/label 4 osiris.png" id="19_rblqk"]
 
 [node name="Amulet1" type="Node2D"]
 
@@ -15,8 +29,8 @@ scale = Vector2(1.42448, 1.7037)
 texture = ExtResource("1_t2pcn")
 
 [node name="Amulet" type="Sprite2D" parent="."]
-position = Vector2(904, 871)
-scale = Vector2(0.399999, 0.399999)
+position = Vector2(869.076, 884.717)
+scale = Vector2(0.376572, 0.376572)
 texture = ExtResource("2_aaevf")
 
 [node name="amulet_backtomainlayer" type="CanvasLayer" parent="."]
@@ -45,5 +59,79 @@ texture_hover = ExtResource("3_4wwmo")
 script = ExtResource("6_bd27p")
 metadata/_edit_use_anchors_ = true
 
+[node name="OsirisEnglishText" type="Sprite2D" parent="."]
+position = Vector2(1120, 184)
+texture = ExtResource("7_v41mf")
+
+[node name="OsirisnameText" type="Sprite2D" parent="."]
+position = Vector2(1499, 167)
+texture = ExtResource("8_wwcdg")
+
+[node name="LabelButtons_Osiris" type="CanvasLayer" parent="."]
+
+[node name="IntroductionButton" type="TextureButton" parent="LabelButtons_Osiris"]
+offset_left = 1142.08
+offset_top = 387.717
+offset_right = 1849.08
+offset_bottom = 980.717
+scale = Vector2(0.560001, 0.560001)
+texture_normal = ExtResource("9_br51v")
+
+[node name="Introduction" type="Sprite2D" parent="LabelButtons_Osiris/IntroductionButton"]
+visible = false
+position = Vector2(1472.99, 229.226)
+scale = Vector2(2.33187, 2.33187)
+texture = ExtResource("10_ld7ab")
+script = ExtResource("11_176sy")
+
+[node name="AfterlifeButton" type="TextureButton" parent="LabelButtons_Osiris"]
+offset_left = 1290.08
+offset_top = 779.717
+offset_right = 1610.08
+offset_bottom = 1619.72
+scale = Vector2(0.239999, 0.239999)
+texture_normal = ExtResource("12_8selb")
+
+[node name="Afterlife" type="Sprite2D" parent="LabelButtons_Osiris/AfterlifeButton"]
+visible = false
+position = Vector2(2799.49, 480.695)
+scale = Vector2(6.26359, 6.26359)
+texture = ExtResource("13_3r0nn")
+script = ExtResource("14_mwywx")
+
+[node name="IconographyButton" type="TextureButton" parent="LabelButtons_Osiris"]
+offset_left = 1218.08
+offset_top = 1046.72
+offset_right = 1685.08
+offset_bottom = 1771.72
+scale = Vector2(0.480001, 0.480001)
+texture_normal = ExtResource("15_d33dg")
+
+[node name="Iconography" type="Sprite2D" parent="LabelButtons_Osiris/IconographyButton"]
+visible = false
+position = Vector2(1541.4, 438.262)
+scale = Vector2(2.76553, 2.76553)
+texture = ExtResource("16_1dpvg")
+script = ExtResource("17_3eo4j")
+
+[node name="LetterButton" type="TextureButton" parent="LabelButtons_Osiris"]
+offset_left = 165.0
+offset_top = 795.0
+offset_right = 777.0
+offset_bottom = 1221.0
+scale = Vector2(0.48, 0.48)
+texture_normal = ExtResource("18_8qdmg")
+
+[node name="Letter" type="Sprite2D" parent="LabelButtons_Osiris/LetterButton"]
+visible = false
+position = Vector2(3170.83, 243.75)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("19_rblqk")
+script = ExtResource("18_1dpvg")
+
 [connection signal="pressed" from="amulet_backtomainlayer/amulet_backtomain" to="amulet_backtomainlayer/amulet_backtomain" method="_on_pressed"]
 [connection signal="pressed" from="amuletnextlayer1/amuletnext1button" to="amuletnextlayer1/amuletnext1button" method="_on_pressed"]
+[connection signal="pressed" from="LabelButtons_Osiris/IntroductionButton" to="LabelButtons_Osiris/IntroductionButton/Introduction" method="_on_introduction_button_pressed"]
+[connection signal="pressed" from="LabelButtons_Osiris/AfterlifeButton" to="LabelButtons_Osiris/AfterlifeButton/Afterlife" method="_on_afterlife_button_pressed"]
+[connection signal="pressed" from="LabelButtons_Osiris/IconographyButton" to="LabelButtons_Osiris/IconographyButton/Iconography" method="_on_iconography_button_pressed"]
+[connection signal="pressed" from="LabelButtons_Osiris/LetterButton" to="LabelButtons_Osiris/LetterButton/Letter" method="_on_letter_button_pressed"]
