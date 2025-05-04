@@ -1,20 +1,24 @@
-[gd_scene load_steps=10 format=3 uid="uid://cgau2l1mxrmak"]
+[gd_scene load_steps=14 format=3 uid="uid://cgau2l1mxrmak"]
 
 [ext_resource type="Texture2D" uid="uid://dwddam0bqh4fm" path="res://assets/Shabti_Box_ (12).png" id="1_u8g3a"]
 [ext_resource type="Texture2D" uid="uid://drdi402ufj7hr" path="res://assets/lookicon_normalpng.png" id="2_o5ah4"]
 [ext_resource type="Texture2D" uid="uid://cc3xjt4pc3gjy" path="res://assets/lookicon_hover.png" id="3_1ovqo"]
 [ext_resource type="Texture2D" uid="uid://cdamfas1uke4m" path="res://assets/handpoint.png" id="6_ldotr"]
 [ext_resource type="Script" uid="uid://dkb2brrm8qwl4" path="res://Scenes/next_1.gd" id="6_orkfw"]
+[ext_resource type="Texture2D" uid="uid://cwhk1h24qyb03" path="res://assets/Imsety-and-Duamutef.png" id="7_1ovqo"]
 [ext_resource type="Texture2D" uid="uid://dke1s3fghqulh" path="res://assets/handpoint_press.png" id="8_1ovqo"]
 [ext_resource type="Script" uid="uid://3hevh3s0kam5" path="res://Scenes/label_2.gd" id="9_1ovqo"]
-[ext_resource type="Texture2D" uid="uid://d3a6q2jdr08k5" path="res://assets/Tja-aa_Name_Label.png" id="9_v38wu"]
+[ext_resource type="Texture2D" uid="uid://btqa30co74jay" path="res://assets/Gramophone.png" id="9_8gqjk"]
+[ext_resource type="Script" uid="uid://dvkfdfgvp48o4" path="res://Scenes/gram.gd" id="10_khmv7"]
+[ext_resource type="Texture2D" uid="uid://cm16o82r1qkld" path="res://assets/Front_Label.png" id="11_7du4s"]
 [ext_resource type="Script" uid="uid://kti3lmrut2wb" path="res://Scenes/box_backtomain.gd" id="11_8gqjk"]
+[ext_resource type="Script" uid="uid://blyvibiyt0bkc" path="res://Scenes/front_osiris.gd" id="12_kc637"]
 
 [node name="FrontBox" type="Node2D"]
 
 [node name="ShabtiBox(12)" type="Sprite2D" parent="."]
-position = Vector2(1299, 831)
-scale = Vector2(1.51423, 1.59387)
+position = Vector2(1232, 897)
+scale = Vector2(1.63383, 1.71976)
 texture = ExtResource("1_u8g3a")
 
 [node name="NextLayer_1" type="CanvasLayer" parent="."]
@@ -31,23 +35,55 @@ texture_hover = ExtResource("8_1ovqo")
 [node name="Next_1" type="Sprite2D" parent="NextLayer_1/NextButton_1"]
 script = ExtResource("6_orkfw")
 
-[node name="Label2" type="CanvasLayer" parent="."]
+[node name="ButtonLayerFront" type="CanvasLayer" parent="."]
 
-[node name="Label2Button" type="TextureButton" parent="Label2"]
-offset_left = 627.0
-offset_top = 324.0
-offset_right = 1258.0
-offset_bottom = 813.0
-scale = Vector2(0.260872, 0.240002)
+[node name="Label2Button" type="TextureButton" parent="ButtonLayerFront"]
+offset_left = 482.0
+offset_top = 521.0
+offset_right = 1091.0
+offset_bottom = 993.0
+scale = Vector2(0.391308, 0.360003)
 texture_normal = ExtResource("2_o5ah4")
 texture_hover = ExtResource("3_1ovqo")
 
-[node name="Label2" type="Sprite2D" parent="Label2/Label2Button"]
+[node name="Label2" type="Sprite2D" parent="ButtonLayerFront/Label2Button"]
 visible = false
-position = Vector2(2510.81, 4012.47)
-scale = Vector2(4.74241, 4.74241)
-texture = ExtResource("9_v38wu")
+position = Vector2(2052.09, 2108.31)
+scale = Vector2(3.54907, 3.54907)
+texture = ExtResource("7_1ovqo")
 script = ExtResource("9_1ovqo")
+
+[node name="GramButton" type="TextureButton" parent="ButtonLayerFront"]
+offset_left = 1765.0
+offset_top = 706.0
+offset_right = 2333.0
+offset_bottom = 1145.0
+scale = Vector2(0.391308, 0.360003)
+texture_normal = ExtResource("2_o5ah4")
+texture_hover = ExtResource("3_1ovqo")
+
+[node name="Gram" type="Sprite2D" parent="ButtonLayerFront/GramButton"]
+visible = false
+position = Vector2(-1236.88, 1538.88)
+scale = Vector2(3.54907, 3.54907)
+texture = ExtResource("9_8gqjk")
+script = ExtResource("10_khmv7")
+
+[node name="FrontButton" type="TextureButton" parent="ButtonLayerFront"]
+offset_left = 1200.0
+offset_top = 42.0
+offset_right = 1768.0
+offset_bottom = 481.0
+scale = Vector2(0.391308, 0.360003)
+texture_normal = ExtResource("2_o5ah4")
+texture_hover = ExtResource("3_1ovqo")
+
+[node name="FrontOsiris" type="Sprite2D" parent="ButtonLayerFront/FrontButton"]
+visible = false
+position = Vector2(191.665, 3458.3)
+scale = Vector2(3.54907, 3.54907)
+texture = ExtResource("11_7du4s")
+script = ExtResource("12_kc637")
 
 [node name="box_backtomainlayer" type="CanvasLayer" parent="."]
 
@@ -83,5 +119,7 @@ theme_override_font_sizes/font_size = 30
 text = "Next Side"
 
 [connection signal="pressed" from="NextLayer_1/NextButton_1" to="NextLayer_1/NextButton_1/Next_1" method="_on_next_1_pressed"]
-[connection signal="pressed" from="Label2/Label2Button" to="Label2/Label2Button/Label2" method="_on_label_2_button_pressed"]
+[connection signal="pressed" from="ButtonLayerFront/Label2Button" to="ButtonLayerFront/Label2Button/Label2" method="_on_label_2_button_pressed"]
+[connection signal="pressed" from="ButtonLayerFront/GramButton" to="ButtonLayerFront/GramButton/Gram" method="_on_gram_button_pressed"]
+[connection signal="pressed" from="ButtonLayerFront/FrontButton" to="ButtonLayerFront/FrontButton/FrontOsiris" method="_on_front_button_pressed"]
 [connection signal="pressed" from="box_backtomainlayer/box_backtomain" to="box_backtomainlayer/box_backtomain" method="_on_pressed"]

@@ -1,10 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://75tinfd8agqr"]
+[gd_scene load_steps=12 format=3 uid="uid://75tinfd8agqr"]
 
 [ext_resource type="Texture2D" uid="uid://u512160sye3v" path="res://assets/bg.png" id="1_31wg8"]
 [ext_resource type="Texture2D" uid="uid://cks577xyn5ids" path="res://assets/Hor.png" id="2_4hba4"]
 [ext_resource type="Texture2D" uid="uid://d2be633prqmni" path="res://assets/ExitButton.png" id="3_7rab6"]
 [ext_resource type="Texture2D" uid="uid://4ogufpv2aok7" path="res://assets/ExitButton_Hover.png" id="4_kw5oc"]
 [ext_resource type="Script" uid="uid://dvffc1cay8rfn" path="res://shabtibacktomain.gd" id="5_7rab6"]
+[ext_resource type="Texture2D" uid="uid://drdi402ufj7hr" path="res://assets/lookicon_normalpng.png" id="6_p7pcm"]
+[ext_resource type="Texture2D" uid="uid://cc3xjt4pc3gjy" path="res://assets/lookicon_hover.png" id="7_xkf3j"]
+[ext_resource type="Texture2D" uid="uid://bbns4bae83v0d" path="res://assets/Crook_and_Flail_final.png" id="8_61ijl"]
+[ext_resource type="Texture2D" uid="uid://d4ixl0rwma1hf" path="res://assets/Shabti_Spell.png" id="8_rk2wh"]
+[ext_resource type="Script" uid="uid://cjsp7new5115y" path="res://shabti_gen.gd" id="9_61ijl"]
+[ext_resource type="Script" uid="uid://c0uxypeva66wa" path="res://crook.gd" id="9_u2s8q"]
 
 [node name="Shabti" type="Node2D"]
 
@@ -39,4 +45,38 @@ offset_bottom = 332.0
 theme_override_font_sizes/font_size = 61
 text = "Main Menu"
 
+[node name="CrookButton" type="TextureButton" parent="shabti_backtomainlayer"]
+offset_left = 729.0
+offset_top = 561.0
+offset_right = 1297.0
+offset_bottom = 1000.0
+scale = Vector2(0.52, 0.52)
+texture_normal = ExtResource("6_p7pcm")
+texture_hover = ExtResource("7_xkf3j")
+
+[node name="Crook" type="Sprite2D" parent="shabti_backtomainlayer/CrookButton"]
+visible = false
+position = Vector2(1059.62, 1298.08)
+scale = Vector2(2.53846, 2.53846)
+texture = ExtResource("8_61ijl")
+script = ExtResource("9_u2s8q")
+
+[node name="ShabtiGenButton" type="TextureButton" parent="."]
+offset_left = 1420.0
+offset_top = 341.0
+offset_right = 1988.0
+offset_bottom = 780.0
+scale = Vector2(0.52, 0.52)
+texture_normal = ExtResource("6_p7pcm")
+texture_hover = ExtResource("7_xkf3j")
+
+[node name="ShabtiGen" type="Sprite2D" parent="ShabtiGenButton"]
+visible = false
+position = Vector2(-244.231, 1686.54)
+scale = Vector2(2.53846, 2.53846)
+texture = ExtResource("8_rk2wh")
+script = ExtResource("9_61ijl")
+
 [connection signal="pressed" from="shabti_backtomainlayer/backtomainbutton" to="shabti_backtomainlayer/backtomainbutton" method="_on_pressed"]
+[connection signal="pressed" from="shabti_backtomainlayer/CrookButton" to="shabti_backtomainlayer/CrookButton/Crook" method="_on_crook_button_pressed"]
+[connection signal="pressed" from="ShabtiGenButton" to="ShabtiGenButton/ShabtiGen" method="_on_shabti_gen_button_pressed"]
