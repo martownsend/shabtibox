@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bp8qss0tshfcx"]
+[gd_scene load_steps=11 format=3 uid="uid://bp8qss0tshfcx"]
 
 [ext_resource type="Texture2D" uid="uid://u512160sye3v" path="res://assets/bg.png" id="1_l01xv"]
 [ext_resource type="Texture2D" uid="uid://beu4ahtq1q2ry" path="res://assets/Shabti_Box_ (4).png" id="1_y5vma"]
@@ -6,6 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://cdamfas1uke4m" path="res://assets/handpoint.png" id="3_kwowg"]
 [ext_resource type="Script" uid="uid://cawmn2euff4n8" path="res://Scenes/back_button_2.gd" id="4_l01xv"]
 [ext_resource type="Script" uid="uid://cksx70yymvd6l" path="res://Scenes/next_button_3.gd" id="5_kwowg"]
+[ext_resource type="Texture2D" uid="uid://drdi402ufj7hr" path="res://assets/lookicon_normalpng.png" id="7_e8oi6"]
+[ext_resource type="Texture2D" uid="uid://cc3xjt4pc3gjy" path="res://assets/lookicon_hover.png" id="8_pimqp"]
+[ext_resource type="Texture2D" uid="uid://cpcpjya6wis63" path="res://assets/Lid_Label.png" id="9_e8oi6"]
+[ext_resource type="Script" uid="uid://c8f6axqj4msig" path="res://Scenes/top.gd" id="10_m2isj"]
 
 [node name="top_box" type="Node2D"]
 
@@ -15,7 +19,7 @@ scale = Vector2(1.40215, 1.60926)
 texture = ExtResource("1_l01xv")
 
 [node name="ShabtiBox(4)" type="Sprite2D" parent="."]
-position = Vector2(1279, 816)
+position = Vector2(1279, 768)
 scale = Vector2(1.22649, 1.22289)
 texture = ExtResource("1_y5vma")
 
@@ -44,5 +48,24 @@ texture_normal = ExtResource("3_kwowg")
 texture_hover = ExtResource("2_re3c5")
 script = ExtResource("5_kwowg")
 
+[node name="LidButtonLayer" type="CanvasLayer" parent="."]
+
+[node name="LidButton" type="TextureButton" parent="LidButtonLayer"]
+offset_left = 1166.0
+offset_top = 283.0
+offset_right = 1734.0
+offset_bottom = 722.0
+scale = Vector2(0.391308, 0.360003)
+texture_normal = ExtResource("7_e8oi6")
+texture_hover = ExtResource("8_pimqp")
+
+[node name="Top" type="Sprite2D" parent="LidButtonLayer/LidButton"]
+visible = false
+position = Vector2(242.776, 2883.31)
+scale = Vector2(3.11399, 3.11399)
+texture = ExtResource("9_e8oi6")
+script = ExtResource("10_m2isj")
+
 [connection signal="pressed" from="BackLayer_2/BackButton_2" to="BackLayer_2/BackButton_2" method="_on_pressed"]
 [connection signal="pressed" from="NexLayer3/NextButton_3" to="NexLayer3/NextButton_3" method="_on_pressed"]
+[connection signal="pressed" from="LidButtonLayer/LidButton" to="LidButtonLayer/LidButton/Top" method="_on_top_button_pressed"]

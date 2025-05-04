@@ -1,10 +1,18 @@
-[gd_scene load_steps=6 format=3 uid="uid://3yrnbb0vs17y"]
+[gd_scene load_steps=14 format=3 uid="uid://3yrnbb0vs17y"]
 
 [ext_resource type="Texture2D" uid="uid://db447f05qkjup" path="res://assets/Shabti_Box_ (2).png" id="1_byc5m"]
 [ext_resource type="Script" uid="uid://bbu87ijvb0ed" path="res://Scenes/next_button_2.gd" id="2_dp5bk"]
 [ext_resource type="Texture2D" uid="uid://cdamfas1uke4m" path="res://assets/handpoint.png" id="2_fk45y"]
 [ext_resource type="Texture2D" uid="uid://dke1s3fghqulh" path="res://assets/handpoint_press.png" id="3_2ycve"]
 [ext_resource type="Script" uid="uid://cjnfa8tpsfbvf" path="res://Scenes/backbutton_1.gd" id="5_2ycve"]
+[ext_resource type="Texture2D" uid="uid://drdi402ufj7hr" path="res://assets/lookicon_normalpng.png" id="6_71ag3"]
+[ext_resource type="Texture2D" uid="uid://cc3xjt4pc3gjy" path="res://assets/lookicon_hover.png" id="7_xhwqm"]
+[ext_resource type="Texture2D" uid="uid://m7p7awpomi1c" path="res://assets/Hapi-and-Qebehsenuef.png" id="8_0u84j"]
+[ext_resource type="Script" uid="uid://c28o54hq6yq3w" path="res://Scenes/hapiand_q.gd" id="9_nh1r7"]
+[ext_resource type="Texture2D" uid="uid://b3xgiy8mhk1l8" path="res://assets/Back_Label.png" id="10_0u84j"]
+[ext_resource type="Script" uid="uid://bt0g0u3kbtws6" path="res://Scenes/bl_ra_h.gd" id="11_nh1r7"]
+[ext_resource type="Texture2D" uid="uid://d3a6q2jdr08k5" path="res://assets/Tja-aa_Name_Label.png" id="12_b1mmi"]
+[ext_resource type="Script" uid="uid://c4jyijtyraru3" path="res://Scenes/name_label.gd" id="13_k66b3"]
 
 [node name="back_box" type="Node2D"]
 
@@ -38,5 +46,58 @@ texture_normal = ExtResource("3_2ycve")
 texture_hover = ExtResource("2_fk45y")
 script = ExtResource("5_2ycve")
 
+[node name="BacksideButtonLayer" type="CanvasLayer" parent="."]
+
+[node name="HapiButton" type="TextureButton" parent="BacksideButtonLayer"]
+offset_left = 485.0
+offset_top = 459.0
+offset_right = 1053.0
+offset_bottom = 898.0
+scale = Vector2(0.391308, 0.360003)
+texture_normal = ExtResource("6_71ag3")
+texture_hover = ExtResource("7_xhwqm")
+
+[node name="HapiandQ" type="Sprite2D" parent="BacksideButtonLayer/HapiButton"]
+visible = false
+position = Vector2(2021.43, 2166.65)
+scale = Vector2(3.51846, 3.51846)
+texture = ExtResource("8_0u84j")
+script = ExtResource("9_nh1r7")
+
+[node name="BackLabelRaHLayer" type="TextureButton" parent="BacksideButtonLayer"]
+offset_left = 1144.0
+offset_top = 719.0
+offset_right = 1712.0
+offset_bottom = 1158.0
+scale = Vector2(0.391308, 0.360003)
+texture_normal = ExtResource("6_71ag3")
+texture_hover = ExtResource("7_xhwqm")
+
+[node name="BLRaH" type="Sprite2D" parent="BacksideButtonLayer/BackLabelRaHLayer"]
+visible = false
+position = Vector2(352.663, 1480.54)
+scale = Vector2(3.44782, 3.44782)
+texture = ExtResource("10_0u84j")
+script = ExtResource("11_nh1r7")
+
+[node name="NameLabelButton" type="TextureButton" parent="BacksideButtonLayer"]
+offset_left = 1721.0
+offset_top = 448.0
+offset_right = 2289.0
+offset_bottom = 887.0
+scale = Vector2(0.391308, 0.360003)
+texture_normal = ExtResource("6_71ag3")
+texture_hover = ExtResource("7_xhwqm")
+
+[node name="NameLabel" type="Sprite2D" parent="BacksideButtonLayer/NameLabelButton"]
+visible = false
+position = Vector2(-1131.57, 2212.22)
+scale = Vector2(3.39623, 3.39623)
+texture = ExtResource("12_b1mmi")
+script = ExtResource("13_k66b3")
+
 [connection signal="pressed" from="NextLayer_2/NextButton_2" to="NextLayer_2/NextButton_2" method="_on_pressed"]
 [connection signal="pressed" from="backbutton_1/backbutton_1" to="backbutton_1/backbutton_1" method="_on_pressed"]
+[connection signal="pressed" from="BacksideButtonLayer/HapiButton" to="BacksideButtonLayer/HapiButton/HapiandQ" method="_on_hapi_button_pressed"]
+[connection signal="pressed" from="BacksideButtonLayer/BackLabelRaHLayer" to="BacksideButtonLayer/BackLabelRaHLayer/BLRaH" method="_on_back_label_ra_h_layer_pressed"]
+[connection signal="pressed" from="BacksideButtonLayer/NameLabelButton" to="BacksideButtonLayer/NameLabelButton/NameLabel" method="_on_name_label_button_pressed"]
