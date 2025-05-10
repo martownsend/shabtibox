@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://jcssy21qgqnp" path="res://assets/label 1 anubis.png" id="15_apy55"]
 [ext_resource type="Script" uid="uid://ch3bic8uwnced" path="res://intro_anubis.gd" id="16_sjers"]
 [ext_resource type="Texture2D" uid="uid://b5qnn1u02ufd6" path="res://assets/amuletmold.png" id="17_50sek"]
-[ext_resource type="Texture2D" uid="uid://dh3hlc5i0b4ht" path="res://assets/label 2 anubis.png" id="18_cvowq"]
+[ext_resource type="Texture2D" uid="uid://brwhl0tu8vi0c" path="res://assets/NewAmulet/anubislabel2.png" id="18_s0650"]
 [ext_resource type="Script" uid="uid://63f2r8lpuiw5" path="res://afterlife_anubis.gd" id="19_nbsxi"]
 [ext_resource type="Texture2D" uid="uid://dp5p4gq515xi0" path="res://assets/canopicjar.png" id="20_s0650"]
 [ext_resource type="Texture2D" uid="uid://hppflvha1j1g" path="res://assets/label 3 anubis.png" id="21_gt15f"]
@@ -121,9 +121,9 @@ texture_normal = ExtResource("17_50sek")
 
 [node name="AfterlifeAnubis" type="Sprite2D" parent="AnubisButtons/AfterlifeAnubisButton"]
 visible = false
-position = Vector2(1106.58, 248.684)
-scale = Vector2(2.04825, 2.04825)
-texture = ExtResource("18_cvowq")
+position = Vector2(1067.11, 275)
+scale = Vector2(0.957203, 0.957203)
+texture = ExtResource("18_s0650")
 script = ExtResource("19_nbsxi")
 
 [node name="IconAnubisButton" type="TextureButton" parent="AnubisButtons"]

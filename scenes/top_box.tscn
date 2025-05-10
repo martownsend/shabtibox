@@ -53,9 +53,9 @@ script = ExtResource("5_kwowg")
 [node name="LidButtonLayer" type="CanvasLayer" parent="."]
 
 [node name="LidButton" type="TextureButton" parent="LidButtonLayer"]
-offset_left = 1169.0
+offset_left = 651.0
 offset_top = 175.0
-offset_right = 1737.0
+offset_right = 1219.0
 offset_bottom = 614.0
 scale = Vector2(0.391308, 0.360003)
 texture_normal = ExtResource("7_e8oi6")
@@ -63,7 +63,7 @@ texture_hover = ExtResource("8_pimqp")
 
 [node name="Top" type="Sprite2D" parent="LidButtonLayer/LidButton"]
 visible = false
-position = Vector2(250.442, 3058.31)
+position = Vector2(1574.21, 2911.09)
 scale = Vector2(3.52288, 3.52288)
 texture = ExtResource("9_e8oi6")
 script = ExtResource("10_m2isj")

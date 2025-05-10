@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://sjaqu3e0eca0" path="res://assets/label 3 isis.png" id="14_s23fk"]
 [ext_resource type="Script" uid="uid://4u6vb7yv6tt6" path="res://icon_isis.gd" id="15_3jgro"]
 [ext_resource type="Texture2D" uid="uid://m0ey380h2lod" path="res://assets/letter.png" id="16_stpoi"]
-[ext_resource type="Texture2D" uid="uid://dy6hieyuah0xi" path="res://assets/label 4 isis.png" id="17_kjt32"]
+[ext_resource type="Texture2D" uid="uid://djoayau1q0p12" path="res://assets/NewAmulet/isislabelhymn.png" id="17_stpoi"]
 [ext_resource type="Script" uid="uid://cajx5es2cq4y0" path="res://letter_isis.gd" id="18_l2847"]
 
 [node name="amulet2" type="Node2D"]
@@ -118,7 +118,7 @@ texture_normal = ExtResource("16_stpoi")
 visible = false
 position = Vector2(3675, 233.333)
 scale = Vector2(3.37347, 3.37347)
-texture = ExtResource("17_kjt32")
+texture = ExtResource("17_stpoi")
 script = ExtResource("18_l2847")
 
 [node name="IsisEnglishText" type="Sprite2D" parent="."]
