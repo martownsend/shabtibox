@@ -5,12 +5,12 @@
 [ext_resource type="Texture2D" uid="uid://cc3xjt4pc3gjy" path="res://assets/lookicon_hover.png" id="3_1ovqo"]
 [ext_resource type="Texture2D" uid="uid://cdamfas1uke4m" path="res://assets/handpoint.png" id="6_ldotr"]
 [ext_resource type="Script" uid="uid://dkb2brrm8qwl4" path="res://Scenes/next_1.gd" id="6_orkfw"]
-[ext_resource type="Texture2D" uid="uid://cwhk1h24qyb03" path="res://assets/Imsety-and-Duamutef.png" id="7_1ovqo"]
+[ext_resource type="Texture2D" uid="uid://cd0o75wpmk3hg" path="res://assets/NewShabtiLabels/ImsDua.png" id="7_4hjbg"]
 [ext_resource type="Texture2D" uid="uid://dke1s3fghqulh" path="res://assets/handpoint_press.png" id="8_1ovqo"]
 [ext_resource type="Script" uid="uid://3hevh3s0kam5" path="res://Scenes/label_2.gd" id="9_1ovqo"]
-[ext_resource type="Texture2D" uid="uid://btqa30co74jay" path="res://assets/Gramophone.png" id="9_8gqjk"]
+[ext_resource type="Texture2D" uid="uid://5hsgjvy4jseu" path="res://assets/NewShabtiLabels/Gram.png" id="9_blys0"]
 [ext_resource type="Script" uid="uid://dvkfdfgvp48o4" path="res://Scenes/gram.gd" id="10_khmv7"]
-[ext_resource type="Texture2D" uid="uid://cm16o82r1qkld" path="res://assets/Front_Label.png" id="11_7du4s"]
+[ext_resource type="Texture2D" uid="uid://ckkvksgn6882t" path="res://assets/NewShabtiLabels/OsirisIsisThrone.png" id="11_4gmgw"]
 [ext_resource type="Script" uid="uid://kti3lmrut2wb" path="res://Scenes/box_backtomain.gd" id="11_8gqjk"]
 [ext_resource type="Script" uid="uid://blyvibiyt0bkc" path="res://Scenes/front_osiris.gd" id="12_kc637"]
 [ext_resource type="Texture2D" uid="uid://dluk1nfsxnouc" path="res://assets/Tja-aa_Label.png" id="13_4hjbg"]
@@ -52,7 +52,7 @@ texture_hover = ExtResource("3_1ovqo")
 visible = false
 position = Vector2(2052.09, 2108.31)
 scale = Vector2(3.54907, 3.54907)
-texture = ExtResource("7_1ovqo")
+texture = ExtResource("7_4hjbg")
 script = ExtResource("9_1ovqo")
 
 [node name="GramButton_Old" type="TextureButton" parent="ButtonLayerFront"]
@@ -68,7 +68,7 @@ texture_hover = ExtResource("3_1ovqo")
 visible = false
 position = Vector2(-1247.1, 1244.43)
 scale = Vector2(3.54907, 3.54907)
-texture = ExtResource("9_8gqjk")
+texture = ExtResource("9_blys0")
 script = ExtResource("10_khmv7")
 
 [node name="FrontButton" type="TextureButton" parent="ButtonLayerFront"]
@@ -84,7 +84,7 @@ texture_hover = ExtResource("3_1ovqo")
 visible = false
 position = Vector2(191.665, 3458.3)
 scale = Vector2(3.54907, 3.54907)
-texture = ExtResource("11_7du4s")
+texture = ExtResource("11_4gmgw")
 script = ExtResource("12_kc637")
 
 [node name="HereWeSeeButton" type="TextureButton" parent="ButtonLayerFront"]
@@ -119,14 +119,14 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="box_backtomainlayer/box_backtomain"]
 layout_mode = 0
-offset_left = 1782.05
-offset_top = 1587.5
-offset_right = 3557.05
-offset_bottom = 2032.5
+offset_left = 1243.59
+offset_top = 1600.0
+offset_right = 2064.59
+offset_bottom = 2045.0
 scale = Vector2(-1, 1)
-theme_override_colors/font_color = Color(0.807919, 0.627132, 0.548774, 1)
+theme_override_colors/font_color = Color(0.71515, 0.608658, 0.50564, 1)
 theme_override_font_sizes/font_size = 326
-text = "Main Menu"
+text = "Back"
 
 [node name="Label" type="Label" parent="."]
 offset_left = 2283.0

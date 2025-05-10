@@ -50,22 +50,28 @@ metadata/_edit_use_anchors_ = true
 
 [node name="MainMenuLayer2" type="CanvasLayer" parent="."]
 
-[node name="MainMenuButton2" type="TextureButton" parent="MainMenuLayer2"]
-offset_left = 2120.0
-offset_top = 151.0
-offset_right = 4040.0
-offset_bottom = 2071.0
-scale = Vector2(0.128, 0.128)
+[node name="MenuTest" type="TextureButton" parent="MainMenuLayer2"]
+anchors_preset = -1
+anchor_left = 0.0546875
+anchor_top = -0.867188
+anchor_right = 0.0546875
+anchor_bottom = -0.867188
+offset_left = 1973.0
+offset_top = 1494.0
+offset_right = 3893.0
+offset_bottom = 3414.0
+scale = Vector2(0.128, 0.128421)
 texture_normal = ExtResource("6_d7rpo")
 texture_hover = ExtResource("7_e565g")
 script = ExtResource("8_0kmh0")
-metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="MainMenuLayer2"]
-offset_left = 2105.0
-offset_top = 306.0
-offset_right = 2382.0
-offset_bottom = 376.0
+offset_left = 2122.0
+offset_top = 286.0
+offset_right = 2399.0
+offset_bottom = 356.0
+scale = Vector2(0.800001, 0.800001)
+theme_override_colors/font_color = Color(0.930355, 0.909644, 0.880157, 1)
 theme_override_font_sizes/font_size = 51
 text = "Main Menu"
 
@@ -142,7 +148,7 @@ texture = ExtResource("21_gt15f")
 script = ExtResource("22_v5xdm")
 
 [connection signal="pressed" from="amulet_back3/amulet_back3button" to="amulet_back3/amulet_back3button" method="_on_pressed"]
-[connection signal="pressed" from="MainMenuLayer2/MainMenuButton2" to="MainMenuLayer2/MainMenuButton2" method="_on_pressed"]
+[connection signal="pressed" from="MainMenuLayer2/MenuTest" to="MainMenuLayer2/MenuTest" method="_on_pressed"]
 [connection signal="pressed" from="AnubisButtons/LetterAnubisButton" to="AnubisButtons/LetterAnubisButton/LetterAnubis" method="_on_letter_anubis_button_pressed"]
 [connection signal="pressed" from="AnubisButtons/IntroAnubisButton" to="AnubisButtons/IntroAnubisButton/IntroAnubis" method="_on_intro_anubis_button_pressed"]
 [connection signal="pressed" from="AnubisButtons/AfterlifeAnubisButton" to="AnubisButtons/AfterlifeAnubisButton/AfterlifeAnubis" method="_on_afterlife_anubis_button_pressed"]

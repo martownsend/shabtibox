@@ -7,16 +7,16 @@
 [ext_resource type="Script" uid="uid://cjnfa8tpsfbvf" path="res://Scenes/backbutton_1.gd" id="5_2ycve"]
 [ext_resource type="Texture2D" uid="uid://drdi402ufj7hr" path="res://assets/lookicon_normalpng.png" id="6_71ag3"]
 [ext_resource type="Texture2D" uid="uid://cc3xjt4pc3gjy" path="res://assets/lookicon_hover.png" id="7_xhwqm"]
-[ext_resource type="Texture2D" uid="uid://m7p7awpomi1c" path="res://assets/Hapi-and-Qebehsenuef.png" id="8_0u84j"]
+[ext_resource type="Texture2D" uid="uid://dq2cebfj484p1" path="res://assets/NewShabtiLabels/HapiQeb.png" id="8_a454m"]
 [ext_resource type="Script" uid="uid://c28o54hq6yq3w" path="res://Scenes/hapiand_q.gd" id="9_nh1r7"]
-[ext_resource type="Texture2D" uid="uid://b3xgiy8mhk1l8" path="res://assets/Back_Label.png" id="10_0u84j"]
+[ext_resource type="Texture2D" uid="uid://dogg1aouv8pc3" path="res://assets/NewShabtiLabels/RaAtum.png" id="10_50xlh"]
 [ext_resource type="Script" uid="uid://bt0g0u3kbtws6" path="res://Scenes/bl_ra_h.gd" id="11_nh1r7"]
 [ext_resource type="Texture2D" uid="uid://d3a6q2jdr08k5" path="res://assets/Tja-aa_Name_Label.png" id="12_b1mmi"]
 [ext_resource type="Script" uid="uid://c4jyijtyraru3" path="res://Scenes/name_label.gd" id="13_k66b3"]
-[ext_resource type="Texture2D" uid="uid://dluk1nfsxnouc" path="res://assets/Tja-aa_Label.png" id="14_a454m"]
 [ext_resource type="Texture2D" uid="uid://btqa30co74jay" path="res://assets/Gramophone.png" id="14_ffiab"]
 [ext_resource type="Script" uid="uid://dvkfdfgvp48o4" path="res://Scenes/gram.gd" id="15_5rpra"]
 [ext_resource type="Script" uid="uid://qb8h8u6yov5b" path="res://Scenes/here_we_see.gd" id="15_50xlh"]
+[ext_resource type="Texture2D" uid="uid://d7sbrko7s1pe" path="res://assets/NewShabtiLabels/Portrait.png" id="16_my2rx"]
 
 [node name="back_box" type="Node2D"]
 
@@ -65,7 +65,7 @@ texture_hover = ExtResource("7_xhwqm")
 visible = false
 position = Vector2(2021.43, 2166.65)
 scale = Vector2(3.51846, 3.51846)
-texture = ExtResource("8_0u84j")
+texture = ExtResource("8_a454m")
 script = ExtResource("9_nh1r7")
 
 [node name="BackLabelRaHLayer" type="TextureButton" parent="BacksideButtonLayer"]
@@ -81,7 +81,7 @@ texture_hover = ExtResource("7_xhwqm")
 visible = false
 position = Vector2(406.329, 3191.64)
 scale = Vector2(3.44782, 3.44782)
-texture = ExtResource("10_0u84j")
+texture = ExtResource("10_50xlh")
 script = ExtResource("11_nh1r7")
 
 [node name="NameLabelButton" type="TextureButton" parent="BacksideButtonLayer"]
@@ -131,7 +131,7 @@ texture_hover = ExtResource("7_xhwqm")
 visible = false
 position = Vector2(-1202.64, 1421.06)
 scale = Vector2(3.56317, 3.56317)
-texture = ExtResource("14_a454m")
+texture = ExtResource("16_my2rx")
 script = ExtResource("15_50xlh")
 
 [connection signal="pressed" from="NextLayer_2/NextButton_2" to="NextLayer_2/NextButton_2" method="_on_pressed"]

@@ -46,6 +46,16 @@ texture_hover = ExtResource("4_bd27p")
 script = ExtResource("5_4wr10")
 metadata/_edit_use_anchors_ = true
 
+[node name="Label" type="Label" parent="amulet_backtomainlayer/amulet_backtomain"]
+offset_left = 1243.59
+offset_top = 1600.0
+offset_right = 2064.59
+offset_bottom = 2045.0
+scale = Vector2(-1, 1)
+theme_override_colors/font_color = Color(0.71515, 0.608658, 0.50564, 1)
+theme_override_font_sizes/font_size = 326
+text = "Back"
+
 [node name="amuletnextlayer1" type="CanvasLayer" parent="."]
 
 [node name="amuletnext1button" type="TextureButton" parent="amuletnextlayer1"]
@@ -58,6 +68,16 @@ texture_normal = ExtResource("4_bd27p")
 texture_hover = ExtResource("3_4wwmo")
 script = ExtResource("6_bd27p")
 metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="amuletnextlayer1/amuletnext1button"]
+offset_left = 62.5015
+offset_top = 1625.0
+offset_right = 244.501
+offset_bottom = 1671.0
+scale = Vector2(10, 10)
+theme_override_colors/font_color = Color(0.60748, 0.787361, 0.684282, 1)
+theme_override_font_sizes/font_size = 30
+text = "Next Amulet"
 
 [node name="OsirisEnglishText" type="Sprite2D" parent="."]
 position = Vector2(1120, 184)

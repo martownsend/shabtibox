@@ -8,9 +8,9 @@
 [ext_resource type="Script" uid="uid://cksx70yymvd6l" path="res://Scenes/next_button_3.gd" id="5_kwowg"]
 [ext_resource type="Texture2D" uid="uid://drdi402ufj7hr" path="res://assets/lookicon_normalpng.png" id="7_e8oi6"]
 [ext_resource type="Texture2D" uid="uid://cc3xjt4pc3gjy" path="res://assets/lookicon_hover.png" id="8_pimqp"]
-[ext_resource type="Texture2D" uid="uid://cpcpjya6wis63" path="res://assets/Lid_Label.png" id="9_e8oi6"]
+[ext_resource type="Texture2D" uid="uid://c25db2cpurfjx" path="res://assets/NewShabtiLabels/TrueofVoice.png" id="9_voqph"]
 [ext_resource type="Script" uid="uid://c8f6axqj4msig" path="res://Scenes/top.gd" id="10_m2isj"]
-[ext_resource type="Texture2D" uid="uid://d3a6q2jdr08k5" path="res://assets/Tja-aa_Name_Label.png" id="11_voqph"]
+[ext_resource type="Texture2D" uid="uid://dxmoew6qfupdc" path="res://assets/NewShabtiLabels/NameTja.png" id="11_m2isj"]
 [ext_resource type="Script" uid="uid://c4jyijtyraru3" path="res://Scenes/name_label.gd" id="12_m2isj"]
 
 [node name="top_box" type="Node2D"]
@@ -65,7 +65,7 @@ texture_hover = ExtResource("8_pimqp")
 visible = false
 position = Vector2(1574.21, 2911.09)
 scale = Vector2(3.52288, 3.52288)
-texture = ExtResource("9_e8oi6")
+texture = ExtResource("9_voqph")
 script = ExtResource("10_m2isj")
 
 [node name="NameLabelButton" type="TextureButton" parent="."]
@@ -81,7 +81,7 @@ texture_hover = ExtResource("8_pimqp")
 visible = false
 position = Vector2(-1103.99, 2894.42)
 scale = Vector2(3.39623, 3.39623)
-texture = ExtResource("11_voqph")
+texture = ExtResource("11_m2isj")
 script = ExtResource("12_m2isj")
 
 [connection signal="pressed" from="BackLayer_2/BackButton_2" to="BackLayer_2/BackButton_2" method="_on_pressed"]
