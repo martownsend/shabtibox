@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://3yrnbb0vs17y"]
+[gd_scene load_steps=18 format=3 uid="uid://3yrnbb0vs17y"]
 
 [ext_resource type="Texture2D" uid="uid://db447f05qkjup" path="res://assets/Shabti_Box_ (2).png" id="1_byc5m"]
 [ext_resource type="Script" uid="uid://bbu87ijvb0ed" path="res://Scenes/next_button_2.gd" id="2_dp5bk"]
@@ -13,6 +13,10 @@
 [ext_resource type="Script" uid="uid://bt0g0u3kbtws6" path="res://Scenes/bl_ra_h.gd" id="11_nh1r7"]
 [ext_resource type="Texture2D" uid="uid://d3a6q2jdr08k5" path="res://assets/Tja-aa_Name_Label.png" id="12_b1mmi"]
 [ext_resource type="Script" uid="uid://c4jyijtyraru3" path="res://Scenes/name_label.gd" id="13_k66b3"]
+[ext_resource type="Texture2D" uid="uid://dluk1nfsxnouc" path="res://assets/Tja-aa_Label.png" id="14_a454m"]
+[ext_resource type="Texture2D" uid="uid://btqa30co74jay" path="res://assets/Gramophone.png" id="14_ffiab"]
+[ext_resource type="Script" uid="uid://dvkfdfgvp48o4" path="res://Scenes/gram.gd" id="15_5rpra"]
+[ext_resource type="Script" uid="uid://qb8h8u6yov5b" path="res://Scenes/here_we_see.gd" id="15_50xlh"]
 
 [node name="back_box" type="Node2D"]
 
@@ -65,22 +69,23 @@ texture = ExtResource("8_0u84j")
 script = ExtResource("9_nh1r7")
 
 [node name="BackLabelRaHLayer" type="TextureButton" parent="BacksideButtonLayer"]
-offset_left = 1144.0
-offset_top = 719.0
-offset_right = 1712.0
-offset_bottom = 1158.0
+offset_left = 1113.0
+offset_top = 125.0
+offset_right = 1681.0
+offset_bottom = 564.0
 scale = Vector2(0.391308, 0.360003)
 texture_normal = ExtResource("6_71ag3")
 texture_hover = ExtResource("7_xhwqm")
 
 [node name="BLRaH" type="Sprite2D" parent="BacksideButtonLayer/BackLabelRaHLayer"]
 visible = false
-position = Vector2(352.663, 1480.54)
+position = Vector2(406.329, 3191.64)
 scale = Vector2(3.44782, 3.44782)
 texture = ExtResource("10_0u84j")
 script = ExtResource("11_nh1r7")
 
 [node name="NameLabelButton" type="TextureButton" parent="BacksideButtonLayer"]
+visible = false
 offset_left = 1721.0
 offset_top = 448.0
 offset_right = 2289.0
@@ -96,8 +101,43 @@ scale = Vector2(3.39623, 3.39623)
 texture = ExtResource("12_b1mmi")
 script = ExtResource("13_k66b3")
 
+[node name="GramButton_2" type="TextureButton" parent="."]
+visible = false
+offset_left = 1352.0
+offset_top = 850.0
+offset_right = 1920.0
+offset_bottom = 1289.0
+scale = Vector2(0.391308, 0.360003)
+texture_normal = ExtResource("6_71ag3")
+texture_hover = ExtResource("7_xhwqm")
+
+[node name="Gram" type="Sprite2D" parent="GramButton_2"]
+visible = false
+position = Vector2(-155.887, 1191.66)
+scale = Vector2(3.54907, 3.54907)
+texture = ExtResource("14_ffiab")
+script = ExtResource("15_5rpra")
+
+[node name="HereWeSeeButton" type="TextureButton" parent="."]
+offset_left = 1729.0
+offset_top = 689.0
+offset_right = 2297.0
+offset_bottom = 1128.0
+scale = Vector2(0.379999, 0.379999)
+texture_normal = ExtResource("6_71ag3")
+texture_hover = ExtResource("7_xhwqm")
+
+[node name="HereWeSee" type="Sprite2D" parent="HereWeSeeButton"]
+visible = false
+position = Vector2(-1202.64, 1421.06)
+scale = Vector2(3.56317, 3.56317)
+texture = ExtResource("14_a454m")
+script = ExtResource("15_50xlh")
+
 [connection signal="pressed" from="NextLayer_2/NextButton_2" to="NextLayer_2/NextButton_2" method="_on_pressed"]
 [connection signal="pressed" from="backbutton_1/backbutton_1" to="backbutton_1/backbutton_1" method="_on_pressed"]
 [connection signal="pressed" from="BacksideButtonLayer/HapiButton" to="BacksideButtonLayer/HapiButton/HapiandQ" method="_on_hapi_button_pressed"]
 [connection signal="pressed" from="BacksideButtonLayer/BackLabelRaHLayer" to="BacksideButtonLayer/BackLabelRaHLayer/BLRaH" method="_on_back_label_ra_h_layer_pressed"]
 [connection signal="pressed" from="BacksideButtonLayer/NameLabelButton" to="BacksideButtonLayer/NameLabelButton/NameLabel" method="_on_name_label_button_pressed"]
+[connection signal="pressed" from="GramButton_2" to="GramButton_2/Gram" method="_on_gram_button_pressed"]
+[connection signal="pressed" from="HereWeSeeButton" to="HereWeSeeButton/HereWeSee" method="_on_here_we_see_button_pressed"]

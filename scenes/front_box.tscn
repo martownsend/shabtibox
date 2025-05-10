@@ -55,18 +55,18 @@ scale = Vector2(3.54907, 3.54907)
 texture = ExtResource("7_1ovqo")
 script = ExtResource("9_1ovqo")
 
-[node name="GramButton" type="TextureButton" parent="ButtonLayerFront"]
-offset_left = 1450.0
-offset_top = 886.0
-offset_right = 2018.0
-offset_bottom = 1325.0
+[node name="GramButton_Old" type="TextureButton" parent="ButtonLayerFront"]
+offset_left = 1767.0
+offset_top = 824.0
+offset_right = 2335.0
+offset_bottom = 1263.0
 scale = Vector2(0.391308, 0.360003)
 texture_normal = ExtResource("2_o5ah4")
 texture_hover = ExtResource("3_1ovqo")
 
-[node name="Gram" type="Sprite2D" parent="ButtonLayerFront/GramButton"]
+[node name="GramButton_Old" type="Sprite2D" parent="ButtonLayerFront/GramButton_Old"]
 visible = false
-position = Vector2(-413.996, 1199.99)
+position = Vector2(-1247.1, 1244.43)
 scale = Vector2(3.54907, 3.54907)
 texture = ExtResource("9_8gqjk")
 script = ExtResource("10_khmv7")
@@ -88,6 +88,7 @@ texture = ExtResource("11_7du4s")
 script = ExtResource("12_kc637")
 
 [node name="HereWeSeeButton" type="TextureButton" parent="ButtonLayerFront"]
+visible = false
 offset_left = 1756.0
 offset_top = 536.0
 offset_right = 2324.0
@@ -138,7 +139,7 @@ text = "Next Side"
 
 [connection signal="pressed" from="NextLayer_1/NextButton_1" to="NextLayer_1/NextButton_1/Next_1" method="_on_next_1_pressed"]
 [connection signal="pressed" from="ButtonLayerFront/Label2Button" to="ButtonLayerFront/Label2Button/Label2" method="_on_label_2_button_pressed"]
-[connection signal="pressed" from="ButtonLayerFront/GramButton" to="ButtonLayerFront/GramButton/Gram" method="_on_gram_button_pressed"]
+[connection signal="pressed" from="ButtonLayerFront/GramButton_Old" to="ButtonLayerFront/GramButton_Old/GramButton_Old" method="_on_gram_button_pressed"]
 [connection signal="pressed" from="ButtonLayerFront/FrontButton" to="ButtonLayerFront/FrontButton/FrontOsiris" method="_on_front_button_pressed"]
 [connection signal="pressed" from="ButtonLayerFront/HereWeSeeButton" to="ButtonLayerFront/HereWeSeeButton/HereWeSee" method="_on_here_we_see_button_pressed"]
 [connection signal="pressed" from="box_backtomainlayer/box_backtomain" to="box_backtomainlayer/box_backtomain" method="_on_pressed"]
