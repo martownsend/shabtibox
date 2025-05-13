@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://s6yx8kwuaj13"]
+[gd_scene load_steps=22 format=3 uid="uid://s6yx8kwuaj13"]
 
 [ext_resource type="Texture2D" uid="uid://u512160sye3v" path="res://assets/bg.png" id="1_t2pcn"]
 [ext_resource type="Texture2D" uid="uid://bt54yjb1bp5ho" path="res://assets/amulet.png" id="2_aaevf"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cdamfas1uke4m" path="res://assets/handpoint.png" id="4_bd27p"]
 [ext_resource type="Script" uid="uid://vik62xsfx6ia" path="res://amulet_backtomain.gd" id="5_4wr10"]
 [ext_resource type="Script" uid="uid://c6fcn602kgf2m" path="res://amuletnext_1_button.gd" id="6_bd27p"]
+[ext_resource type="Script" uid="uid://dkb2brrm8qwl4" path="res://Scenes/next_1.gd" id="6_rblqk"]
 [ext_resource type="Texture2D" uid="uid://dt7uyy8fyjun3" path="res://assets/osiris_english_text.png" id="7_v41mf"]
 [ext_resource type="Texture2D" uid="uid://dws87sxd01thw" path="res://assets/osirisname_text.png" id="8_wwcdg"]
 [ext_resource type="Texture2D" uid="uid://bmpsu7xo12rcq" path="res://assets/crookandflail.png" id="9_br51v"]
@@ -24,22 +25,22 @@
 [node name="Amulet1" type="Node2D"]
 
 [node name="Bg" type="Sprite2D" parent="."]
-position = Vector2(1285.5, 864)
-scale = Vector2(1.42448, 1.7037)
+position = Vector2(946, 541.501)
+scale = Vector2(1.07083, 1.10648)
 texture = ExtResource("1_t2pcn")
 
 [node name="Amulet" type="Sprite2D" parent="."]
-position = Vector2(869.076, 884.717)
-scale = Vector2(0.376572, 0.376572)
+position = Vector2(543, 666)
+scale = Vector2(0.229906, 0.229906)
 texture = ExtResource("2_aaevf")
 
 [node name="amulet_backtomainlayer" type="CanvasLayer" parent="."]
 
 [node name="amulet_backtomain" type="TextureButton" parent="amulet_backtomainlayer"]
-offset_left = 305.0
-offset_top = 75.0
-offset_right = 2225.0
-offset_bottom = 1995.0
+offset_left = 179.0
+offset_top = 18.0
+offset_right = 2099.0
+offset_bottom = 1938.0
 scale = Vector2(-0.08, 0.08)
 texture_normal = ExtResource("3_4wwmo")
 texture_hover = ExtResource("4_bd27p")
@@ -56,13 +57,26 @@ theme_override_colors/font_color = Color(0.71515, 0.608658, 0.50564, 1)
 theme_override_font_sizes/font_size = 326
 text = "Back"
 
+[node name="NextButton_1" type="TextureButton" parent="amulet_backtomainlayer/amulet_backtomain"]
+visible = false
+offset_left = 1714.0
+offset_top = 18.0
+offset_right = 3634.0
+offset_bottom = 1938.0
+scale = Vector2(0.08, 0.08)
+texture_normal = ExtResource("4_bd27p")
+texture_hover = ExtResource("3_4wwmo")
+
+[node name="Next_1" type="Sprite2D" parent="amulet_backtomainlayer/amulet_backtomain/NextButton_1"]
+script = ExtResource("6_rblqk")
+
 [node name="amuletnextlayer1" type="CanvasLayer" parent="."]
 
 [node name="amuletnext1button" type="TextureButton" parent="amuletnextlayer1"]
-offset_left = 2281.0
-offset_top = 65.0
-offset_right = 4201.0
-offset_bottom = 1985.0
+offset_left = 1714.0
+offset_top = 18.0
+offset_right = 3634.0
+offset_bottom = 1938.0
 scale = Vector2(0.08, 0.08)
 texture_normal = ExtResource("4_bd27p")
 texture_hover = ExtResource("3_4wwmo")
@@ -80,76 +94,79 @@ theme_override_font_sizes/font_size = 30
 text = "Next Amulet"
 
 [node name="OsirisEnglishText" type="Sprite2D" parent="."]
-position = Vector2(1120, 184)
+position = Vector2(763, 135)
+scale = Vector2(0.88, 0.88)
 texture = ExtResource("7_v41mf")
 
 [node name="OsirisnameText" type="Sprite2D" parent="."]
-position = Vector2(1499, 167)
+position = Vector2(1102, 123)
+scale = Vector2(0.88, 0.88)
 texture = ExtResource("8_wwcdg")
 
 [node name="LabelButtons_Osiris" type="CanvasLayer" parent="."]
 
 [node name="IntroductionButton" type="TextureButton" parent="LabelButtons_Osiris"]
-offset_left = 1006.0
-offset_top = 390.0
-offset_right = 1713.0
-offset_bottom = 983.0
-scale = Vector2(0.560001, 0.560001)
+offset_left = 695.0
+offset_top = 265.0
+offset_right = 1402.0
+offset_bottom = 858.0
+scale = Vector2(0.440001, 0.440001)
 texture_normal = ExtResource("9_br51v")
 
 [node name="Introduction" type="Sprite2D" parent="LabelButtons_Osiris/IntroductionButton"]
 visible = false
-position = Vector2(1439.28, 237.5)
-scale = Vector2(1.26044, 1.26044)
+position = Vector2(1578.65, 250.618)
+scale = Vector2(1.04757, 1.04757)
 texture = ExtResource("10_8qdmg")
 script = ExtResource("11_176sy")
 
 [node name="AfterlifeButton" type="TextureButton" parent="LabelButtons_Osiris"]
-offset_left = 1154.0
-offset_top = 782.0
-offset_right = 1474.0
-offset_bottom = 1622.0
-scale = Vector2(0.239999, 0.239999)
+offset_left = 817.0
+offset_top = 553.0
+offset_right = 1137.0
+offset_bottom = 1393.0
+scale = Vector2(0.188571, 0.188571)
 texture_normal = ExtResource("12_8selb")
 
 [node name="Afterlife" type="Sprite2D" parent="LabelButtons_Osiris/AfterlifeButton"]
 visible = false
-position = Vector2(2799.49, 480.695)
-scale = Vector2(6.26359, 6.26359)
+position = Vector2(3070.47, 403.031)
+scale = Vector2(5.75235, 5.75235)
 texture = ExtResource("13_rblqk")
 script = ExtResource("14_mwywx")
 
 [node name="IconographyButton" type="TextureButton" parent="LabelButtons_Osiris"]
-offset_left = 1082.0
-offset_top = 1049.0
-offset_right = 1549.0
-offset_bottom = 1774.0
-scale = Vector2(0.480001, 0.480001)
+offset_left = 768.0
+offset_top = 775.0
+offset_right = 1235.0
+offset_bottom = 1500.0
+scale = Vector2(0.377144, 0.377144)
 texture_normal = ExtResource("15_d33dg")
 
 [node name="Iconography" type="Sprite2D" parent="LabelButtons_Osiris/IconographyButton"]
 visible = false
-position = Vector2(1541.4, 438.262)
-scale = Vector2(2.76553, 2.76553)
+position = Vector2(1673.1, 275.757)
+scale = Vector2(2.51913, 2.51912)
 texture = ExtResource("16_j4yad")
 script = ExtResource("17_3eo4j")
 
 [node name="LetterButton" type="TextureButton" parent="LabelButtons_Osiris"]
-offset_left = 165.0
-offset_top = 795.0
-offset_right = 777.0
-offset_bottom = 1221.0
-scale = Vector2(0.48, 0.48)
+offset_left = 97.0
+offset_top = 511.0
+offset_right = 709.0
+offset_bottom = 937.0
+scale = Vector2(0.377143, 0.377143)
 texture_normal = ExtResource("18_8qdmg")
 
 [node name="Letter" type="Sprite2D" parent="LabelButtons_Osiris/LetterButton"]
 visible = false
-position = Vector2(3714.58, 272.917)
-scale = Vector2(3.5, 3.5)
+position = Vector2(3584.85, 352.651)
+scale = Vector2(2.93013, 2.93013)
 texture = ExtResource("19_rblqk")
 script = ExtResource("18_1dpvg")
 
 [connection signal="pressed" from="amulet_backtomainlayer/amulet_backtomain" to="amulet_backtomainlayer/amulet_backtomain" method="_on_pressed"]
+[connection signal="pressed" from="amulet_backtomainlayer/amulet_backtomain/NextButton_1" to="amulet_backtomainlayer/amulet_backtomain/NextButton_1/Next_1" method="_on_next_1_pressed"]
 [connection signal="pressed" from="amuletnextlayer1/amuletnext1button" to="amuletnextlayer1/amuletnext1button" method="_on_pressed"]
 [connection signal="pressed" from="LabelButtons_Osiris/IntroductionButton" to="LabelButtons_Osiris/IntroductionButton/Introduction" method="_on_introduction_button_pressed"]
 [connection signal="pressed" from="LabelButtons_Osiris/AfterlifeButton" to="LabelButtons_Osiris/AfterlifeButton/Afterlife" method="_on_afterlife_button_pressed"]

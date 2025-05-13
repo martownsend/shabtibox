@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bwd2hku5no1p0"]
+[gd_scene load_steps=9 format=3 uid="uid://bwd2hku5no1p0"]
 
 [ext_resource type="VideoStream" uid="uid://b2lbfhut3xlpo" path="res://assets/turntabletest.ogv" id="1_c5n4h"]
 [ext_resource type="Texture2D" uid="uid://d2be633prqmni" path="res://assets/ExitButton.png" id="2_lg7xf"]
@@ -7,15 +7,16 @@
 [ext_resource type="Texture2D" uid="uid://dke1s3fghqulh" path="res://assets/handpoint_press.png" id="5_e2fo8"]
 [ext_resource type="Texture2D" uid="uid://cdamfas1uke4m" path="res://assets/handpoint.png" id="6_6rkc4"]
 [ext_resource type="Script" uid="uid://d4m0am8l8eisp" path="res://back_turnaround.gd" id="7_tjd4s"]
+[ext_resource type="Script" uid="uid://dkb2brrm8qwl4" path="res://Scenes/next_1.gd" id="8_6rkc4"]
 
 [node name="Turnaround" type="Node2D"]
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
-offset_left = -118.0
-offset_top = -56.0
-offset_right = 1802.0
-offset_bottom = 1024.0
-scale = Vector2(1.46412, 1.6701)
+offset_left = -42.0
+offset_top = -83.0
+offset_right = 1878.0
+offset_bottom = 997.0
+scale = Vector2(1.04332, 1.1901)
 stream = ExtResource("1_c5n4h")
 autoplay = true
 loop = true
@@ -23,10 +24,10 @@ loop = true
 [node name="MainMenuLayer" type="CanvasLayer" parent="."]
 
 [node name="MainMenuButton" type="TextureButton" parent="MainMenuLayer"]
-offset_left = 2152.0
-offset_top = 106.0
-offset_right = 4072.0
-offset_bottom = 2026.0
+offset_left = 1594.0
+offset_top = 59.0
+offset_right = 3514.0
+offset_bottom = 1979.0
 scale = Vector2(0.128, 0.128)
 texture_normal = ExtResource("2_lg7xf")
 texture_hover = ExtResource("3_5kw0q")
@@ -51,14 +52,28 @@ text = "Main Menu"
 metadata/_edit_use_anchors_ = true
 
 [node name="Back_Turnaround" type="TextureButton" parent="MainMenuLayer"]
-offset_left = 305.0
-offset_top = 75.0
-offset_right = 2225.0
-offset_bottom = 1995.0
+offset_left = 179.0
+offset_top = 18.0
+offset_right = 2099.0
+offset_bottom = 1938.0
 scale = Vector2(-0.08, 0.08)
 texture_normal = ExtResource("5_e2fo8")
 texture_hover = ExtResource("6_6rkc4")
 script = ExtResource("7_tjd4s")
 
+[node name="NextButton_1" type="TextureButton" parent="MainMenuLayer/Back_Turnaround"]
+visible = false
+offset_left = 1714.0
+offset_top = 18.0
+offset_right = 3634.0
+offset_bottom = 1938.0
+scale = Vector2(0.08, 0.08)
+texture_normal = ExtResource("6_6rkc4")
+texture_hover = ExtResource("5_e2fo8")
+
+[node name="Next_1" type="Sprite2D" parent="MainMenuLayer/Back_Turnaround/NextButton_1"]
+script = ExtResource("8_6rkc4")
+
 [connection signal="pressed" from="MainMenuLayer/MainMenuButton" to="MainMenuLayer/MainMenuButton" method="_on_pressed"]
 [connection signal="pressed" from="MainMenuLayer/Back_Turnaround" to="MainMenuLayer/Back_Turnaround" method="_on_pressed"]
+[connection signal="pressed" from="MainMenuLayer/Back_Turnaround/NextButton_1" to="MainMenuLayer/Back_Turnaround/NextButton_1/Next_1" method="_on_next_1_pressed"]

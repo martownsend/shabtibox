@@ -1,10 +1,11 @@
-[gd_scene load_steps=21 format=3 uid="uid://chk32veqm0nrs"]
+[gd_scene load_steps=22 format=3 uid="uid://chk32veqm0nrs"]
 
 [ext_resource type="Texture2D" uid="uid://u512160sye3v" path="res://assets/bg.png" id="1_dk5ef"]
 [ext_resource type="Texture2D" uid="uid://dopx6ucuqir7g" path="res://assets/isis.png" id="2_gfbdg"]
 [ext_resource type="Texture2D" uid="uid://dke1s3fghqulh" path="res://assets/handpoint_press.png" id="3_jfmas"]
 [ext_resource type="Texture2D" uid="uid://cdamfas1uke4m" path="res://assets/handpoint.png" id="4_o2ju4"]
 [ext_resource type="Script" uid="uid://dhpg8p4vbelrn" path="res://amulet_back.gd" id="5_n5287"]
+[ext_resource type="Script" uid="uid://dkb2brrm8qwl4" path="res://Scenes/next_1.gd" id="6_kjt32"]
 [ext_resource type="Script" uid="uid://k2nrl3hiqlj8" path="res://amuletnext_2_button.gd" id="6_lko2x"]
 [ext_resource type="Texture2D" uid="uid://dnn1jnsfxdh6h" path="res://assets/isisheadress.png" id="7_3no3c"]
 [ext_resource type="Texture2D" uid="uid://daj3yvoicpfdw" path="res://assets/label 1 isis.png" id="8_sphwm"]
@@ -24,35 +25,48 @@
 [node name="amulet2" type="Node2D"]
 
 [node name="Bg" type="Sprite2D" parent="."]
-position = Vector2(1276.5, 838.5)
-scale = Vector2(1.37552, 1.59537)
+position = Vector2(967.643, 637)
+scale = Vector2(1.05379, 1.22222)
 texture = ExtResource("1_dk5ef")
 
 [node name="Isis" type="Sprite2D" parent="."]
-position = Vector2(886, 868)
-scale = Vector2(0.249496, 0.249496)
+position = Vector2(672, 642)
+scale = Vector2(0.23197, 0.23197)
 texture = ExtResource("2_gfbdg")
 
 [node name="amulet_back" type="CanvasLayer" parent="."]
 
 [node name="amulet_back" type="TextureButton" parent="amulet_back"]
-offset_left = 305.0
-offset_top = 75.0
-offset_right = 2225.0
-offset_bottom = 1995.0
+offset_left = 179.0
+offset_top = 18.0
+offset_right = 2099.0
+offset_bottom = 1938.0
 scale = Vector2(-0.08, 0.08)
 texture_normal = ExtResource("3_jfmas")
 texture_hover = ExtResource("4_o2ju4")
 script = ExtResource("5_n5287")
 metadata/_edit_use_anchors_ = true
 
+[node name="NextButton_1" type="TextureButton" parent="amulet_back/amulet_back"]
+visible = false
+offset_left = 1714.0
+offset_top = 18.0
+offset_right = 3634.0
+offset_bottom = 1938.0
+scale = Vector2(0.08, 0.08)
+texture_normal = ExtResource("4_o2ju4")
+texture_hover = ExtResource("3_jfmas")
+
+[node name="Next_1" type="Sprite2D" parent="amulet_back/amulet_back/NextButton_1"]
+script = ExtResource("6_kjt32")
+
 [node name="amuletnextlayer2" type="CanvasLayer" parent="."]
 
 [node name="amuletnext2button" type="TextureButton" parent="amuletnextlayer2"]
-offset_left = 2281.0
-offset_top = 65.0
-offset_right = 4201.0
-offset_bottom = 1985.0
+offset_left = 1714.0
+offset_top = 18.0
+offset_right = 3634.0
+offset_bottom = 1938.0
 scale = Vector2(0.08, 0.08)
 texture_normal = ExtResource("4_o2ju4")
 texture_hover = ExtResource("3_jfmas")
@@ -62,75 +76,76 @@ metadata/_edit_use_anchors_ = true
 [node name="ButtonLayer_Isis" type="CanvasLayer" parent="."]
 
 [node name="IntroButtonIsis" type="TextureButton" parent="ButtonLayer_Isis"]
-offset_left = 1117.0
-offset_top = 403.0
-offset_right = 1477.0
-offset_bottom = 779.0
-scale = Vector2(0.68, 0.68)
+offset_left = 873.0
+offset_top = 273.0
+offset_right = 1233.0
+offset_bottom = 649.0
+scale = Vector2(0.52, 0.52)
 texture_normal = ExtResource("7_3no3c")
 
 [node name="IntroIsis" type="Sprite2D" parent="ButtonLayer_Isis/IntroButtonIsis"]
 visible = false
-position = Vector2(1063.24, 164.706)
-scale = Vector2(1.88471, 1.88471)
+position = Vector2(1000, 169.231)
+scale = Vector2(1.59962, 1.59962)
 texture = ExtResource("8_sphwm")
 script = ExtResource("9_oe56x")
 
 [node name="AfterlifeIsisButton" type="TextureButton" parent="ButtonLayer_Isis"]
-offset_left = 1166.0
-offset_top = 743.0
-offset_right = 1650.0
-offset_bottom = 1763.0
-scale = Vector2(0.32, 0.32)
+offset_left = 916.0
+offset_top = 481.0
+offset_right = 1400.0
+offset_bottom = 1501.0
+scale = Vector2(0.244706, 0.244706)
 texture_normal = ExtResource("10_hk6ae")
 
 [node name="AfterlifeIsis" type="Sprite2D" parent="ButtonLayer_Isis/AfterlifeIsisButton"]
 visible = false
-position = Vector2(2118.75, 412.5)
-scale = Vector2(4.05098, 4.05098)
+position = Vector2(1939.06, 500.017)
+scale = Vector2(3.43029, 3.43029)
 texture = ExtResource("11_jnhv0")
 script = ExtResource("12_7jy5d")
 
 [node name="IconIsisButton" type="TextureButton" parent="ButtonLayer_Isis"]
-offset_left = 1128.0
-offset_top = 1135.0
-offset_right = 1981.0
-offset_bottom = 2415.0
-scale = Vector2(0.280003, 0.280003)
+offset_left = 884.0
+offset_top = 774.0
+offset_right = 1737.0
+offset_bottom = 2054.0
+scale = Vector2(0.21412, 0.21412)
 texture_normal = ExtResource("13_7jy5d")
 
 [node name="IconIsis" type="Sprite2D" parent="ButtonLayer_Isis/IconIsisButton"]
 visible = false
-position = Vector2(2527.26, 590.993)
-scale = Vector2(5.11328, 5.11328)
+position = Vector2(2363.16, 546.423)
+scale = Vector2(4.43814, 4.43814)
 texture = ExtResource("14_s23fk")
 script = ExtResource("15_3jgro")
 
 [node name="LetterIsisButton" type="TextureButton" parent="ButtonLayer_Isis"]
-offset_left = 165.0
-offset_top = 795.0
-offset_right = 777.0
-offset_bottom = 1221.0
-scale = Vector2(0.48, 0.48)
+offset_left = 143.0
+offset_top = 545.0
+offset_right = 755.0
+offset_bottom = 971.0
+scale = Vector2(0.367059, 0.367059)
 texture_normal = ExtResource("16_stpoi")
 
 [node name="LetterIsis" type="Sprite2D" parent="ButtonLayer_Isis/LetterIsisButton"]
 visible = false
-position = Vector2(3675, 233.333)
+position = Vector2(3582.53, 239.744)
 scale = Vector2(3.37347, 3.37347)
 texture = ExtResource("17_stpoi")
 script = ExtResource("18_l2847")
 
 [node name="IsisEnglishText" type="Sprite2D" parent="."]
-position = Vector2(1138, 173)
+position = Vector2(771, 145)
 texture = ExtResource("10_ry66m")
 
 [node name="IsisnameText" type="Sprite2D" parent="."]
-position = Vector2(1584, 157)
+position = Vector2(1143, 134)
 scale = Vector2(0.64, 0.64)
 texture = ExtResource("11_hk6ae")
 
 [connection signal="pressed" from="amulet_back/amulet_back" to="amulet_back/amulet_back" method="_on_pressed"]
+[connection signal="pressed" from="amulet_back/amulet_back/NextButton_1" to="amulet_back/amulet_back/NextButton_1/Next_1" method="_on_next_1_pressed"]
 [connection signal="pressed" from="amuletnextlayer2/amuletnext2button" to="amuletnextlayer2/amuletnext2button" method="_on_pressed"]
 [connection signal="pressed" from="ButtonLayer_Isis/IntroButtonIsis" to="ButtonLayer_Isis/IntroButtonIsis/IntroIsis" method="_on_intro_button_isis_pressed"]
 [connection signal="pressed" from="ButtonLayer_Isis/AfterlifeIsisButton" to="ButtonLayer_Isis/AfterlifeIsisButton/AfterlifeIsis" method="_on_afterlife_isis_button_pressed"]

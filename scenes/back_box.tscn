@@ -21,17 +21,17 @@
 [node name="back_box" type="Node2D"]
 
 [node name="ShabtiBox(2)" type="Sprite2D" parent="."]
-position = Vector2(1293, 829)
-scale = Vector2(1.50417, 1.5287)
+position = Vector2(954, 568)
+scale = Vector2(1.05456, 1.07176)
 texture = ExtResource("1_byc5m")
 
 [node name="NextLayer_2" type="CanvasLayer" parent="."]
 
 [node name="NextButton_2" type="TextureButton" parent="NextLayer_2"]
-offset_left = 2281.0
-offset_top = 65.0
-offset_right = 4201.0
-offset_bottom = 1985.0
+offset_left = 1714.0
+offset_top = 18.0
+offset_right = 3634.0
+offset_bottom = 1938.0
 scale = Vector2(0.0800005, 0.0800005)
 texture_normal = ExtResource("2_fk45y")
 texture_hover = ExtResource("3_2ycve")
@@ -40,10 +40,10 @@ script = ExtResource("2_dp5bk")
 [node name="backbutton_1" type="CanvasLayer" parent="."]
 
 [node name="backbutton_1" type="TextureButton" parent="backbutton_1"]
-offset_left = 305.0
-offset_top = 75.0
-offset_right = 2225.0
-offset_bottom = 1995.0
+offset_left = 179.0
+offset_top = 18.0
+offset_right = 2099.0
+offset_bottom = 1938.0
 rotation = 3.14159
 scale = Vector2(0.078, -0.08)
 texture_normal = ExtResource("3_2ycve")
@@ -53,34 +53,34 @@ script = ExtResource("5_2ycve")
 [node name="BacksideButtonLayer" type="CanvasLayer" parent="."]
 
 [node name="HapiButton" type="TextureButton" parent="BacksideButtonLayer"]
-offset_left = 485.0
-offset_top = 459.0
-offset_right = 1053.0
-offset_bottom = 898.0
+offset_left = 334.0
+offset_top = 354.0
+offset_right = 902.0
+offset_bottom = 793.0
 scale = Vector2(0.391308, 0.360003)
 texture_normal = ExtResource("6_71ag3")
 texture_hover = ExtResource("7_xhwqm")
 
 [node name="HapiandQ" type="Sprite2D" parent="BacksideButtonLayer/HapiButton"]
 visible = false
-position = Vector2(2021.43, 2166.65)
-scale = Vector2(3.51846, 3.51846)
+position = Vector2(1585.44, 1280.75)
+scale = Vector2(2.54564, 2.54564)
 texture = ExtResource("8_a454m")
 script = ExtResource("9_nh1r7")
 
 [node name="BackLabelRaHLayer" type="TextureButton" parent="BacksideButtonLayer"]
-offset_left = 1113.0
-offset_top = 125.0
-offset_right = 1681.0
-offset_bottom = 564.0
+offset_left = 837.0
+offset_top = 35.0
+offset_right = 1405.0
+offset_bottom = 474.0
 scale = Vector2(0.391308, 0.360003)
 texture_normal = ExtResource("6_71ag3")
 texture_hover = ExtResource("7_xhwqm")
 
 [node name="BLRaH" type="Sprite2D" parent="BacksideButtonLayer/BackLabelRaHLayer"]
 visible = false
-position = Vector2(406.329, 3191.64)
-scale = Vector2(3.44782, 3.44782)
+position = Vector2(334.775, 2247.2)
+scale = Vector2(2.64983, 2.64983)
 texture = ExtResource("10_50xlh")
 script = ExtResource("11_nh1r7")
 
@@ -119,18 +119,18 @@ texture = ExtResource("14_ffiab")
 script = ExtResource("15_5rpra")
 
 [node name="HereWeSeeButton" type="TextureButton" parent="."]
-offset_left = 1729.0
-offset_top = 689.0
-offset_right = 2297.0
-offset_bottom = 1128.0
+offset_left = 1253.0
+offset_top = 394.0
+offset_right = 1821.0
+offset_bottom = 833.0
 scale = Vector2(0.379999, 0.379999)
 texture_normal = ExtResource("6_71ag3")
 texture_hover = ExtResource("7_xhwqm")
 
 [node name="HereWeSee" type="Sprite2D" parent="HereWeSeeButton"]
 visible = false
-position = Vector2(-1202.64, 1421.06)
-scale = Vector2(3.56317, 3.56317)
+position = Vector2(-736.844, 1115.79)
+scale = Vector2(2.67668, 2.67668)
 texture = ExtResource("16_my2rx")
 script = ExtResource("15_50xlh")
 

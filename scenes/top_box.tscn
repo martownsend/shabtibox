@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bp8qss0tshfcx"]
+[gd_scene load_steps=14 format=3 uid="uid://bp8qss0tshfcx"]
 
 [ext_resource type="Texture2D" uid="uid://u512160sye3v" path="res://assets/bg.png" id="1_l01xv"]
 [ext_resource type="Texture2D" uid="uid://beu4ahtq1q2ry" path="res://assets/Shabti_Box_ (4).png" id="1_y5vma"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cdamfas1uke4m" path="res://assets/handpoint.png" id="3_kwowg"]
 [ext_resource type="Script" uid="uid://cawmn2euff4n8" path="res://Scenes/back_button_2.gd" id="4_l01xv"]
 [ext_resource type="Script" uid="uid://cksx70yymvd6l" path="res://Scenes/next_button_3.gd" id="5_kwowg"]
+[ext_resource type="Script" uid="uid://dkb2brrm8qwl4" path="res://Scenes/next_1.gd" id="6_m2isj"]
 [ext_resource type="Texture2D" uid="uid://drdi402ufj7hr" path="res://assets/lookicon_normalpng.png" id="7_e8oi6"]
 [ext_resource type="Texture2D" uid="uid://cc3xjt4pc3gjy" path="res://assets/lookicon_hover.png" id="8_pimqp"]
 [ext_resource type="Texture2D" uid="uid://c25db2cpurfjx" path="res://assets/NewShabtiLabels/TrueofVoice.png" id="9_voqph"]
@@ -16,35 +17,48 @@
 [node name="top_box" type="Node2D"]
 
 [node name="Bg" type="Sprite2D" parent="."]
-position = Vector2(1296, 842)
-scale = Vector2(1.40215, 1.60926)
+position = Vector2(927, 553)
+scale = Vector2(1.00119, 1.14907)
 texture = ExtResource("1_l01xv")
 
 [node name="ShabtiBox(4)" type="Sprite2D" parent="."]
-position = Vector2(1276, 628)
-scale = Vector2(1.22649, 1.22289)
+position = Vector2(910, 441)
+scale = Vector2(0.915985, 0.913297)
 texture = ExtResource("1_y5vma")
 
 [node name="BackLayer_2" type="CanvasLayer" parent="."]
 
 [node name="BackButton_2" type="TextureButton" parent="BackLayer_2"]
-offset_left = 305.0
-offset_top = 75.0
-offset_right = 2225.0
-offset_bottom = 1995.0
+offset_left = 179.0
+offset_top = 18.0
+offset_right = 2099.0
+offset_bottom = 1938.0
 rotation = 3.14159
 scale = Vector2(0.08, -0.08)
 texture_normal = ExtResource("2_re3c5")
 texture_hover = ExtResource("3_kwowg")
 script = ExtResource("4_l01xv")
 
+[node name="NextButton_1" type="TextureButton" parent="BackLayer_2/BackButton_2"]
+visible = false
+offset_left = 1714.0
+offset_top = 18.0
+offset_right = 3634.0
+offset_bottom = 1938.0
+scale = Vector2(0.08, 0.08)
+texture_normal = ExtResource("3_kwowg")
+texture_hover = ExtResource("2_re3c5")
+
+[node name="Next_1" type="Sprite2D" parent="BackLayer_2/BackButton_2/NextButton_1"]
+script = ExtResource("6_m2isj")
+
 [node name="NexLayer3" type="CanvasLayer" parent="."]
 
 [node name="NextButton_3" type="TextureButton" parent="NexLayer3"]
-offset_left = 2281.0
-offset_top = 65.0
-offset_right = 4201.0
-offset_bottom = 1985.0
+offset_left = 1714.0
+offset_top = 18.0
+offset_right = 3634.0
+offset_bottom = 1938.0
 scale = Vector2(0.08, 0.08)
 texture_normal = ExtResource("3_kwowg")
 texture_hover = ExtResource("2_re3c5")
@@ -53,38 +67,39 @@ script = ExtResource("5_kwowg")
 [node name="LidButtonLayer" type="CanvasLayer" parent="."]
 
 [node name="LidButton" type="TextureButton" parent="LidButtonLayer"]
-offset_left = 651.0
-offset_top = 175.0
-offset_right = 1219.0
-offset_bottom = 614.0
+offset_left = 442.0
+offset_top = 61.0
+offset_right = 1010.0
+offset_bottom = 500.0
 scale = Vector2(0.391308, 0.360003)
 texture_normal = ExtResource("7_e8oi6")
 texture_hover = ExtResource("8_pimqp")
 
 [node name="Top" type="Sprite2D" parent="LidButtonLayer/LidButton"]
 visible = false
-position = Vector2(1574.21, 2911.09)
-scale = Vector2(3.52288, 3.52288)
+position = Vector2(1285.43, 2158.32)
+scale = Vector2(2.67476, 2.67476)
 texture = ExtResource("9_voqph")
 script = ExtResource("10_m2isj")
 
 [node name="NameLabelButton" type="TextureButton" parent="."]
-offset_left = 1678.0
-offset_top = 173.0
-offset_right = 2246.0
-offset_bottom = 612.0
+offset_left = 1178.0
+offset_top = 68.0
+offset_right = 1746.0
+offset_bottom = 507.0
 scale = Vector2(0.391308, 0.360003)
 texture_normal = ExtResource("7_e8oi6")
 texture_hover = ExtResource("8_pimqp")
 
 [node name="NameLabel" type="Sprite2D" parent="NameLabelButton"]
 visible = false
-position = Vector2(-1103.99, 2894.42)
-scale = Vector2(3.39623, 3.39623)
+position = Vector2(-570.692, 2154.7)
+scale = Vector2(2.6039, 2.6039)
 texture = ExtResource("11_m2isj")
 script = ExtResource("12_m2isj")
 
 [connection signal="pressed" from="BackLayer_2/BackButton_2" to="BackLayer_2/BackButton_2" method="_on_pressed"]
+[connection signal="pressed" from="BackLayer_2/BackButton_2/NextButton_1" to="BackLayer_2/BackButton_2/NextButton_1/Next_1" method="_on_next_1_pressed"]
 [connection signal="pressed" from="NexLayer3/NextButton_3" to="NexLayer3/NextButton_3" method="_on_pressed"]
 [connection signal="pressed" from="LidButtonLayer/LidButton" to="LidButtonLayer/LidButton/Top" method="_on_top_button_pressed"]
 [connection signal="pressed" from="NameLabelButton" to="NameLabelButton/NameLabel" method="_on_name_label_button_pressed"]

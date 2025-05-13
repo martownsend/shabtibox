@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://kxpjpurs1uoc"]
+[gd_scene load_steps=24 format=3 uid="uid://kxpjpurs1uoc"]
 
 [ext_resource type="Texture2D" uid="uid://u512160sye3v" path="res://assets/bg.png" id="1_al7cf"]
 [ext_resource type="Texture2D" uid="uid://s4u0utfurapa" path="res://assets/anubis.png" id="2_ce1o1"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cdamfas1uke4m" path="res://assets/handpoint.png" id="4_mvht6"]
 [ext_resource type="Script" uid="uid://bbh7nt3k6dldh" path="res://amulet_back_3_button.gd" id="5_kue6f"]
 [ext_resource type="Texture2D" uid="uid://d2be633prqmni" path="res://assets/ExitButton.png" id="6_d7rpo"]
+[ext_resource type="Script" uid="uid://dkb2brrm8qwl4" path="res://Scenes/next_1.gd" id="6_gt15f"]
 [ext_resource type="Texture2D" uid="uid://4ogufpv2aok7" path="res://assets/ExitButton_Hover.png" id="7_e565g"]
 [ext_resource type="Script" uid="uid://vglvwy5qpno4" path="res://main_menu_button_2.gd" id="8_0kmh0"]
 [ext_resource type="Texture2D" uid="uid://h4lt7a4506n8" path="res://assets/anubis_english_text.png" id="9_0kmh0"]
@@ -31,22 +32,35 @@ scale = Vector2(1.40781, 1.59352)
 texture = ExtResource("1_al7cf")
 
 [node name="Anubis" type="Sprite2D" parent="."]
-position = Vector2(876, 938)
-scale = Vector2(0.292607, 0.292607)
+position = Vector2(563, 637)
+scale = Vector2(0.263303, 0.263303)
 texture = ExtResource("2_ce1o1")
 
 [node name="amulet_back3" type="CanvasLayer" parent="."]
 
 [node name="amulet_back3button" type="TextureButton" parent="amulet_back3"]
-offset_left = 305.0
-offset_top = 75.0
-offset_right = 2225.0
-offset_bottom = 1995.0
+offset_left = 179.0
+offset_top = 18.0
+offset_right = 2099.0
+offset_bottom = 1938.0
 scale = Vector2(-0.08, 0.08)
 texture_normal = ExtResource("3_dovc6")
 texture_hover = ExtResource("4_mvht6")
 script = ExtResource("5_kue6f")
 metadata/_edit_use_anchors_ = true
+
+[node name="NextButton_1" type="TextureButton" parent="amulet_back3/amulet_back3button"]
+visible = false
+offset_left = 1714.0
+offset_top = 18.0
+offset_right = 3634.0
+offset_bottom = 1938.0
+scale = Vector2(0.08, 0.08)
+texture_normal = ExtResource("4_mvht6")
+texture_hover = ExtResource("3_dovc6")
+
+[node name="Next_1" type="Sprite2D" parent="amulet_back3/amulet_back3button/NextButton_1"]
+script = ExtResource("6_gt15f")
 
 [node name="MainMenuLayer2" type="CanvasLayer" parent="."]
 
@@ -56,43 +70,43 @@ anchor_left = 0.0546875
 anchor_top = -0.867188
 anchor_right = 0.0546875
 anchor_bottom = -0.867188
-offset_left = 1973.0
-offset_top = 1494.0
-offset_right = 3893.0
-offset_bottom = 3414.0
-scale = Vector2(0.128, 0.128421)
+offset_left = 1565.0
+offset_top = 996.562
+offset_right = 3485.0
+offset_bottom = 2916.56
+scale = Vector2(0.0881312, 0.0884212)
 texture_normal = ExtResource("6_d7rpo")
 texture_hover = ExtResource("7_e565g")
 script = ExtResource("8_0kmh0")
 
 [node name="Label" type="Label" parent="MainMenuLayer2"]
-offset_left = 2122.0
-offset_top = 286.0
-offset_right = 2399.0
-offset_bottom = 356.0
+offset_left = 1641.0
+offset_top = 168.0
+offset_right = 1918.0
+offset_bottom = 238.0
 scale = Vector2(0.800001, 0.800001)
 theme_override_colors/font_color = Color(0.930355, 0.909644, 0.880157, 1)
 theme_override_font_sizes/font_size = 51
 text = "Main Menu"
 
 [node name="AnubisEnglishText" type="Sprite2D" parent="."]
-position = Vector2(999.94, 219.75)
-scale = Vector2(0.536419, 0.536419)
+position = Vector2(714, 127)
+scale = Vector2(0.480653, 0.480653)
 texture = ExtResource("9_0kmh0")
 
 [node name="AnubisnameText" type="Sprite2D" parent="."]
-position = Vector2(1552.94, 238.75)
-scale = Vector2(0.960001, 0.960001)
+position = Vector2(1176, 139)
+scale = Vector2(0.838408, 0.838408)
 texture = ExtResource("10_vhj4p")
 
 [node name="AnubisButtons" type="CanvasLayer" parent="."]
 
 [node name="LetterAnubisButton" type="TextureButton" parent="AnubisButtons"]
-offset_left = 165.0
-offset_top = 795.0
-offset_right = 777.0
-offset_bottom = 1221.0
-scale = Vector2(0.48, 0.48)
+offset_left = 143.0
+offset_top = 545.0
+offset_right = 755.0
+offset_bottom = 971.0
+scale = Vector2(0.328421, 0.328421)
 texture_normal = ExtResource("11_vfytj")
 
 [node name="LetterAnubis" type="Sprite2D" parent="AnubisButtons/LetterAnubisButton"]
@@ -103,11 +117,11 @@ texture = ExtResource("12_7mfk5")
 script = ExtResource("13_b0dpo")
 
 [node name="IntroAnubisButton" type="TextureButton" parent="AnubisButtons"]
-offset_left = 1200.0
-offset_top = 415.0
-offset_right = 1642.0
-offset_bottom = 873.0
-scale = Vector2(0.640001, 0.640001)
+offset_left = 811.0
+offset_top = 276.0
+offset_right = 1253.0
+offset_bottom = 734.0
+scale = Vector2(0.437895, 0.437895)
 texture_normal = ExtResource("14_mtc0n")
 
 [node name="IntroAnubis" type="Sprite2D" parent="AnubisButtons/IntroAnubisButton"]
@@ -118,11 +132,11 @@ texture = ExtResource("15_apy55")
 script = ExtResource("16_sjers")
 
 [node name="AfterlifeAnubisButton" type="TextureButton" parent="AnubisButtons"]
-offset_left = 1215.0
-offset_top = 796.0
-offset_right = 1609.0
-offset_bottom = 1180.0
-scale = Vector2(0.76, 0.76)
+offset_left = 813.0
+offset_top = 519.0
+offset_right = 1207.0
+offset_bottom = 903.0
+scale = Vector2(0.52, 0.52)
 texture_normal = ExtResource("17_50sek")
 
 [node name="AfterlifeAnubis" type="Sprite2D" parent="AnubisButtons/AfterlifeAnubisButton"]
@@ -133,21 +147,22 @@ texture = ExtResource("18_s0650")
 script = ExtResource("19_nbsxi")
 
 [node name="IconAnubisButton" type="TextureButton" parent="AnubisButtons"]
-offset_left = 1238.0
-offset_top = 1149.0
-offset_right = 1916.0
-offset_bottom = 2119.0
-scale = Vector2(0.359999, 0.359999)
+offset_left = 836.0
+offset_top = 772.0
+offset_right = 1514.0
+offset_bottom = 1742.0
+scale = Vector2(0.246315, 0.246315)
 texture_normal = ExtResource("20_s0650")
 
 [node name="IconAnubis" type="Sprite2D" parent="AnubisButtons/IconAnubisButton"]
 visible = false
-position = Vector2(2177.78, 525.001)
+position = Vector2(2131.42, 442.523)
 scale = Vector2(3.90592, 3.90592)
 texture = ExtResource("21_gt15f")
 script = ExtResource("22_v5xdm")
 
 [connection signal="pressed" from="amulet_back3/amulet_back3button" to="amulet_back3/amulet_back3button" method="_on_pressed"]
+[connection signal="pressed" from="amulet_back3/amulet_back3button/NextButton_1" to="amulet_back3/amulet_back3button/NextButton_1/Next_1" method="_on_next_1_pressed"]
 [connection signal="pressed" from="MainMenuLayer2/MenuTest" to="MainMenuLayer2/MenuTest" method="_on_pressed"]
 [connection signal="pressed" from="AnubisButtons/LetterAnubisButton" to="AnubisButtons/LetterAnubisButton/LetterAnubis" method="_on_letter_anubis_button_pressed"]
 [connection signal="pressed" from="AnubisButtons/IntroAnubisButton" to="AnubisButtons/IntroAnubisButton/IntroAnubis" method="_on_intro_anubis_button_pressed"]
