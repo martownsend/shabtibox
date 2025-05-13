@@ -16,9 +16,10 @@
 [ext_resource type="Script" uid="uid://bjj8r0tio74my" path="res://Scenes/quit_button.gd" id="13_vtepg"]
 
 [node name="MainMenu" type="Node2D"]
+scale = Vector2(0.641047, 0.64)
 
 [node name="After(lives)" type="Sprite2D" parent="."]
-position = Vector2(1279, 825)
+position = Vector2(1534.99, 825.001)
 scale = Vector2(1.60644, 1.57869)
 texture = ExtResource("1_opfnp")
 
@@ -26,48 +27,52 @@ texture = ExtResource("1_opfnp")
 script = ExtResource("2_ce3w2")
 
 [node name="Tjaaaa" type="TextureButton" parent="TjaaaaButtonLayer"]
-offset_left = 847.0
-offset_top = 764.0
-offset_right = 6031.0
-offset_bottom = 4220.0
-scale = Vector2(0.159999, 0.159999)
+offset_left = 692.0
+offset_top = 457.0
+offset_right = 5876.0
+offset_bottom = 3913.0
+scale = Vector2(0.123008, 0.122807)
 texture_normal = ExtResource("3_opfnp")
 texture_hover = ExtResource("4_trj04")
 script = ExtResource("4_n45e2")
+metadata/_edit_use_anchors_ = true
 
 [node name="HorButtonLayer" type="CanvasLayer" parent="."]
 
 [node name="HorButton" type="TextureButton" parent="HorButtonLayer"]
-offset_left = 392.0
-offset_top = 782.0
-offset_right = 1639.0
-offset_bottom = 3551.0
-scale = Vector2(0.1718, 0.169569)
+offset_left = 313.0
+offset_top = 475.0
+offset_right = 1560.0
+offset_bottom = 3244.0
+scale = Vector2(0.132081, 0.130153)
 texture_normal = ExtResource("5_cp0ys")
 texture_hover = ExtResource("7_16hvj")
 script = ExtResource("8_16hvj")
+metadata/_edit_use_anchors_ = true
 
 [node name="AmuletLayer" type="CanvasLayer" parent="."]
 
 [node name="AmuletButton" type="TextureButton" parent="AmuletLayer"]
-offset_left = 1587.0
-offset_top = 697.0
-offset_right = 6771.0
-offset_bottom = 4153.0
-scale = Vector2(0.159998, 0.169183)
+offset_left = 1245.0
+offset_top = 430.0
+offset_right = 6429.0
+offset_bottom = 3886.0
+scale = Vector2(0.123007, 0.129856)
 texture_normal = ExtResource("6_yhxw7")
 texture_hover = ExtResource("9_vr1f0")
 script = ExtResource("11_vr1f0")
+metadata/_edit_use_anchors_ = true
 
 [node name="QuitButton" type="TextureButton" parent="."]
-offset_left = 2231.0
-offset_top = 1432.0
-offset_right = 4151.0
-offset_bottom = 2512.0
+offset_left = 2622.27
+offset_top = 123.438
+offset_right = 4542.27
+offset_bottom = 1203.44
 scale = Vector2(0.12, 0.12)
 texture_normal = ExtResource("12_5egv6")
 texture_hover = ExtResource("13_8dnnj")
 script = ExtResource("13_vtepg")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="TjaaaaButtonLayer/Tjaaaa" to="TjaaaaButtonLayer/Tjaaaa" method="_on_pressed"]
 [connection signal="pressed" from="HorButtonLayer/HorButton" to="HorButtonLayer/HorButton" method="_on_pressed"]
